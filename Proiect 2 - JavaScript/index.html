@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+
+<head>
+
+    <title>Cofetaria Serelina</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <link rel="shortcut icon" type="image/png" href="Photos/icon.png ">
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="form-style.css"> -->
+
+    <script src="java.js"></script> 
+    <script src="j2.js"></script>
+
+
+</head>
+
+
+
+<body>
+  
+<!-- ............................Nav Bar ......................... -->
+
+<nav class="nav-main">
+
+  <span class="navbar-toggle" id="js-navbar-toggle">
+    <i class="fas fa-bars"></i>
+  </span>
+
+  <ul class="main-nav"  id="js-menu">
+
+    <!-- .............Ceasul................. -->
+    <p id="demo"></p>
+    <script>
+      var myVar = setInterval(myTimer, 1000);
+      
+      function myTimer() {
+        var d = new Date();
+        document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+      }
+      </script>
+
+      
+    
+    <li><a href="#Acasa" class=" nav-links w3-block ">Acasa</a></li>
+
+    <li class="dropdown">
+          <!-- <a href="javascript:void(0)" class="dropbtn">Povestea Noastra</a> -->
+          <a href="#PovesteaNoastra" class="nav-links dropbtn">Povestea Noastra</a>
+
+          <div class="dropdown-content">
+            <a href="#Deschidere">Deschidere</a>
+            <a href="#Vitrinanoastra">Vitrina noastra</a>
+          </div>
+    </li>
+
+    <li class="dropdown">
+            <!-- <a href="javascript:void(0)" class="dropbtn">Produsele noastre</a> -->
+            <a href="#ProduseleNoastre" class="nav-links dropbtn">Produsele Noastre</a>
+
+            <div class="dropdown-content">
+              <a href="#Torturi">Torturi</a>
+              <a href="#Prajituri">Prajituri</a>
+              <a href="#ProduseSpeciale">Produse Speciale</a>
+              <a href="#ProdusedePost">Produse de Post</a>
+
+
+            </div>
+    </li>
+    <li><a href="#Contact" class="nav-links" >Contact</a></li>
+    <li><a href="Torturi-Prajituri.html" class="nav-links w3-block ">Torturi - Prajituri</a></li>
+  </ul>
+</nav>
+
+<div id="Acasa">
+  <div id="header">
+    <img  alt="Coperta" style="width:60%;height:60%" src="Photos/cover.jpg"/>
+  </div> 
+</div>
+
+<!-- ........................................................................... -->
+
+
+
+<!-- ..........Dark Mode................ -->
+<div>
+  <input type="checkbox" id="checkboxTheme" class="cm-toggle"/>
+<em>Incearca modul Dark!</em>
+</div>
+
+
+
+
+<!-- About Container -->
+<div class="w3-container" id="PovesteaNoastra">
+    <div class="w3-content" style="max-width:700px">
+      <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">Povestea Noastra</span></h5>
+      <!-- <img src="photo(2).jpg" style="width:50%;max-width:1000px" class="w3-margin-top"> -->
+    </div>
+</div>
+
+
+<!-- ..............................Prezentare Deschidere & Vitrina noastra........................ -->
+
+
+<div class="w3-container" id="Deschidere">
+  <div class="w3-content" style="max-width:700px">
+    <h4 class="w3-padding-32"><span class="w3-tag w3-wide">Deschidere</span></h4>
+  </div>
+</div>
+
+
+
+<div class="row">
+  <div class="column">    <div class="img-hover-zoom img-hover-zoom--slowmo">
+    <img style="height:450px;width:100%" src="Photos/Desch(1).jpg" alt="Deschidere" >
+  </div> </div>
+  <div class="column">    <div class="img-hover-zoom img-hover-zoom--slowmo">
+    <img style="height:450px;width:100%" src="Photos/Desch(2).jpg" alt="Deschidere" >
+  </div> </div>
+  <div class="column">    <div class="img-hover-zoom img-hover-zoom--slowmo">
+    <img style="height:450px;width:100%" src="Photos/Desch(3).jpg" alt="Deschidere" >
+  </div> </div>
+  <div class="column">    <div class="img-hover-zoom img-hover-zoom--slowmo">
+    <img style="height:450px;width:100%" src="Photos/Desch(4).jpg" alt="Deschidere" >
+  </div> </div>
+</div>
+
+
+<div class="w3-container" id="Vitrinanoastra">
+  <div class="w3-content" style="max-width:700px">
+    <h4 class="w3-padding-32"><span class="w3-tag w3-wide">Vitrina Noastra</span></h4>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column">    <div class="img-hover-zoom img-hover-zoom--slowmo">
+    <img style="height:250px;width:100%" src="Photos/Vitrina1.jpg" alt="Vitrina noastra" >
+  </div></div>
+  <div class="column">    <div class="img-hover-zoom img-hover-zoom--slowmo">
+    <img style="height:250px;width:100%" src="Photos/Vitrina2.jpg" alt="Vitrina noastra" >
+  </div></div>
+  <div class="column">    <div class="img-hover-zoom img-hover-zoom--slowmo">
+    <img style="height:250px;width:100%" src="Photos/Vitrina3.jpg" alt="Vitrina noastra" >
+  </div></div>
+  <div class="column">    <div class="img-hover-zoom img-hover-zoom--slowmo">
+    <img style="height:250px;width:100%" src="Photos/Vitrina4.jpg" alt="Vitrina noastra" >
+  </div></div>
+</div>
+
+<br> 
+
+
+
+<!-- .....................................Meniu Produse......................................... -->
+
+
+<!-- Menu Container -->
+<div class="w3-container" id="ProduseleNoastre">
+  
+  <div class="w3-content" style="max-width:700px">
+   
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Produsele noastre</span></h5>
+   
+    <!-- <img src="photo(1).jpg" style="width:50%;max-width:1000px" class="w3-margin-top"> -->
+   <br>   
+    
+    
+    <div class="w3-row w3-center w3-card w3-padding">
+
+
+      <a href="javascript:void(0)" onclick="openMenu(event, '1Torturi');" >
+        <div class="w3-col s6 tablink"><p>Torturi</p></div>
+      </a>
+   
+      <a href="javascript:void(0)" onclick="openMenu(event, '2Prajituri');" > 
+        <div class="w3-col s6 tablink">
+          <p>Prajituri</p></div>
+      </a>
+    </div>
+
+    <div class="w3-row w3-center w3-card w3-padding">
+      <a href="javascript:void(0)" onclick="openMenu(event, '3ProduseSpeciale');" >
+        <div class="w3-col s6 tablink">
+          <p>Produse Speciale</p></div>
+         
+      </a>
+
+      <a href="javascript:void(0)" onclick="openMenu(event, '4ProdusedePost');" >
+        <div class="w3-col s6 tablink">
+          <p>Produse de Post</p></div>
+      </a>
+    </div>  
+ 
+
+    <div id="1Torturi" class="w3-container menu w3-padding-48 w3-card">
+        <h5>☆Tort trio chocolate</h5>
+        <h5>☆Tort decorat cu felii de pară caramelizate</h5>
+        <h5>☆Tort cu cremă de iaurt cu fructe de pădure</h5>
+        <h5>☆Tort cu blat de nucă, caramel și bucăți de nucă întreagă</h5>
+        <h5>☆Tort cu crema de lapte, vișine întregi și mousse de fructe de pădure</h5>
+        <h5>☆Tort diplomat</h5>
+        <br>
+        <h5>☆Tort cu mousse de ciocolată și vișine întregi</h5>
+        <h5>☆Tort cu mousse de ciocolată și mentă</h5>
+        <h5>☆Tort cu mousse de ciocolată și cremă de lapte</h5>
+        <h5>☆Tort cu mousse de fructe de pădure</h5>
+        <br>
+        <h5>☆Tort "18". Cremă de mascarpone și mousse de ciocolată (se pot realiza asemenea torturi pe orice număr/cifră)</h5>
+        <h5>☆Tort sugar free - perfect pentru persoanele ce suferă de diabet!</h5>
+        <br>
+        <h5>☆Tort unicorn cu decor de cremă de unt</h5>
+        <h5>☆Tort curcubeu cu cremă mascarpone și dulceață de fructe de pădure</h5>
+        <h5>☆Tort cu foaie icing</h5>
+        <h5>☆Tort Barbie și cupcakes cu prințesele Disney</h5>
+    </div>
+
+    <div id="2Prajituri" class="w3-container menu w3-padding-48 w3-card">
+        <h5>☆prăjiturile asortate "Sereline" - semnătura cofetăriei noastre</h5>
+        <h5>☆Sereline cu nucă/mentă</h5>
+        <br>
+        <h5>☆inimoare cu mousse de ciocolată și fructe de pădure</h5>
+        <h5>☆ruladă cu iaurt și fructe de pădure</h5>
+        <h5>☆monoporții de trio chocolate</h5>
+        <br>
+        <h5>☆savarine cu frișcă naturală</h5>
+        <h5>☆prăjitură diplomat</h5>
+        <h5>☆prăjitura boema</h5>
+        <h5>☆tiramisu la pahar: clasic sau cu fructe</h5>
+        <h5>☆ecler cu: cafea/ vanilie/ ciocolată și cireșe amarene/ caramel/ fistic/ fructe de pădure</h5>
+        <br>
+        <h5>☆prăjitură kinder felie de lapte</h5>
+        <h5>☆prăjitură nesscake</h5>
+        <h5>☆cheesecake copt cu mure</h5>
+        <h5>☆brioșe cu ciocolată</h5>
+        <h5>☆bomboane raffaello/ glazurate/ cu unt de arahide si dulceață de ardei iute</h5>
+        <br>
+        <h5>☆mini ecleruri: vanilie sau caramel</h5>
+        <h5>☆mini tarte cu fructe</h5>
+        <h5>☆mini amandine</h5>
+        <h5>☆mini tarte cu fructe</h5>
+        <h5>☆mini tort cu nucă și caramel</h5>
+        <h5>☆mini tort diplomat</h5>
+        <br>
+        <h5>☆fursecuri cu: nucă/ gem de caise/ nucă de cocos</h5>
+        <h5>☆paleuri cu ciocolată sau gem</h5>
+        <h5>☆pricomigdale simple sau cu ciocolată</h5>
+        <h5>☆saleuri</h5>
+        <h5>☆bezele</h5>
+    </div>
+
+    <div id="3ProduseSpeciale" class="w3-container menu w3-padding-48 w3-card">
+        <h5>☆Mucenici moldovenești</h5>
+        <h5>☆Torturi tematice  de ziua femeii - în forma cifei opt conține mousse de fructe de padure și ciocolată fiind decorate cu flori comestibile</h5>
+        <h5>☆Mărțisoare dulci - O inimioară conține blat de cacao, mousse de fructe de pădure, de ciocolată și cremă de lămâie</h5>
+        <br>
+        <h5>☆Torturi in formă de inimă</h5>
+        <h5>☆Monoporții în formă de inimioară</h5>
+        <br>
+        <h5>☆Cozonac dulce/ de post</h5>
+        <h5>☆Chec de casă</h5>
+        <h5>☆Tortul "Buturugă de ciocolată"</h5>
+    </div>
+
+    <div id="4ProdusedePost" class="w3-container menu w3-padding-48 w3-card">
+        <h4>☆Torturi de post cu creme de:</h4>
+        <h5>•ciocolată</h5>
+        <h5>•mango</h5>
+        <h5>•vișine</h5>
+        <h5>•lămăie verde cu scorțișoară</h5>
+        <h5>•zmeură</h5>
+        <h5>•caramel</h5>
+        <br>
+        <h4>☆Prajituri de post:</h4>
+        <h5>•prăjitură cu bulion, griș și gem de prune</h5>
+        <h5>•prăjitură cu bulion, mere și gem</h5>
+        <h5>•biluțe cu vișine sau alune</h5>
+        <h5>•fursecuri cu cocos/nucă/gem de vișine</h5>
+        <h5>•tăvălită</h5>
+        <h5>•prăjitură cu ness</h5>
+        <h5>•prăjitură cu fructe de pădure</h5>
+        <h5>•salam de biscuiți</h5>
+        <h5>•prăjitură cu vișine și ciocolată amăruie</h5>
+        <br>
+        <h4>☆Speciale:</h4>
+        <h5>•Cozonacul de post</h5>
+        <h5>•Mucenici moldovenești</h5>
+    </div>
+
+  </div> 
+</div>  
+
+<br>   
+
+
+
+
+<!-- ....................................Poze Produse dupa Meniu................................. -->
+
+<div class="w3-row-padding">
+
+  <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-display-container">
+      <div class="w3-display-topleft w3-black w3-padding" id="Torturi">Torturi</div>
+      <div class="img-hover-zoom img-hover-zoom--slowmo"><img src="Photos/Torturi1.jpg" alt="Torturi1" style="width:100%"></div>
+      <br> 
+      <div class="img-hover-zoom img-hover-zoom--slowmo"><img src="Photos/Torturi2.jpg" alt="Torturi2" style="width:100%"></div>
+
+    </div>
+  </div>
+  <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-display-container">
+      <div class="w3-display-topleft w3-black w3-padding" id="Prajituri">Prajituri</div>
+      <div class="img-hover-zoom img-hover-zoom--slowmo"><img src="Photos/Prajituri1.jpg" alt="Prajituri1" style="width:100%"></div>
+      <br> 
+      <div class="img-hover-zoom img-hover-zoom--slowmo"><img src="Photos/Prajituri2.jpg" alt="Prajituri2" style="width:100%"></div>
+
+    </div>
+  </div>
+
+  <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-display-container">
+      <div class="w3-display-topleft w3-black w3-padding" id="ProduseSpeciale">Produse Speciale</div>
+      <div class="img-hover-zoom img-hover-zoom--slowmo"><img src="Photos/ProdSpec1.jpg" alt="ProduseSpeciale1" style="width:100%"></div>
+      <br> 
+      <div class="img-hover-zoom img-hover-zoom--slowmo"><img src="Photos/ProdSpec2.jpg" alt="ProduseSpeciale2" style="width:100%"></div>
+
+    </div>
+  </div>
+  <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-display-container">
+      <div class="w3-display-topleft w3-black w3-padding" id="ProdusedePost">Produse de Post</div>
+      <div class="img-hover-zoom img-hover-zoom--slowmo"><img src="Photos/ProdPost1.jpg" alt="Prajituri1" style="width:100%"></div>
+      <br> 
+      <div class="img-hover-zoom img-hover-zoom--slowmo"><img src="Photos/ProdPost2.jpg" alt="Prajituri2" style="width:100%"></div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ........................................................................... -->
+
+
+
+<!-- Contact/Area Container -->
+<div class="w3-container" id="Contact" style="padding-bottom:32px;">
+  <div class="w3-content" style="max-width:700px">
+    
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Contact</span></h5>
+    
+    <p><span class="w3-tag">Program:</span>
+       <strong>Luni:închis, Marti-Sâmbătă:10-18, Duminică:11-16</strong></p>
+    <p><span class="w3-tag">Adresa:</span>
+      <strong>Strada Belvedere, Nr. 10, Bl. 10, Scara A, Parter - Onești, Bacău</strong></p>
+    <p><span class="w3-tag">Telefon:</span>
+      <strong>0741 228 351</strong></p>
+      
+     <!-- ..........................Photo&Video....................................... -->
+    <div>
+      <ul><li>
+        <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fcofetariaserelina%2Fvideos%2F2687390008006699%2F&show_text=0&width=269" 
+        width="269" height="476" 
+        style="border:none;overflow:hidden" float="left" scrolling="no" 
+        frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe></li></ul>
+    </div>
+    <img src="Photos/photo(1).jpg" alt="Poza Contact" class="center" style="width:50%">
+
+
+    
+<!-- ..................................Formular.......................................... -->
+    
+    
+    <!-- <form action="confirmation.html" target="_blank">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Numele și Prenumele" required name="Nume"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Tipul Produsului" required name="Tipul Produsului"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" required name="date" value="2020-03-24T10:00"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Mesaj \ Comenzi Speciale" required name="Mesaj \ Comenzi Speciale"></p>
+      <p><button class="w3-button w3-black" type="submit">TRIMITE</button></p>
+    </form> -->
+
+
+
+
+    <form name="contactForm" onsubmit="return validateForm()" action="confirmation.html" method="post">
+      <h3>Trimite o comanda!</h3>
+
+      <div class="row">
+          <label>Numele si Prenumele</label>
+          <input type="text" name="name">
+          <div class="error" id="nameErr"></div>
+      </div>
+
+
+      <div class="row">
+          <label>Adresa Email</label>
+          <input type="text" name="email">
+          <div class="error" id="emailErr"></div>
+      </div>
+
+
+      <div class="row">
+          <label>Telefon</label>
+          <input type="text" name="mobile" maxlength="10">
+          <div class="error" id="mobileErr"></div>
+      </div>
+
+
+      <div class="row">
+          <label>Tipul Produsului</label>
+          <select name="tipulprod">
+              <option>Selectati</option>
+              <option>Torturi</option>
+              <option>Prajituri</option>
+              <option>Produse Speciale</option>
+              <option>Produse de Post</option>
+          </select> 
+          <input  type="text" placeholder="Descrierea produsului" name="descriereprod">
+
+          <div class="error" id="tipulprodErr"></div>
+      </div>
+      
+      
+      <div class="row">
+          <label>Livrare</label>
+          <div class="form-inline">
+              <label><input type="radio" name="livrare" value="magaizn"> In magazin</label>
+              <label><input type="radio" name="livrare" value="domiciliu"> La domiciliu</label> 
+          </div>
+          <div class="error" id="livrareErr"></div>
+      </div>
+      
+      
+      <div class="row">
+        <label>Metoda de plata</label>
+        <div class="form-inline">
+          <label><input type="radio" name="plata" value="Cash"> Cash</label>
+          <label><input type="radio" name="plata" value="Card"> Card</label>
+         </div>
+        <div class="error" id="plataErr"></div>
+    </div>
+
+
+      <div class="row">
+          <!-- <input type="submit" value="Submit"> -->
+          <!-- <p><button class="w3-button w3-black" type="submit">TRIMITE</button></p> -->
+          <input type="submit" class="w3-button w3-black" value="TRIMITE" >
+      </div>
+
+  </form>
+
+
+  Spune-ti parerea: <input id="comId" type="text"/>
+        <button  class="w3-button w3-black" id='logInButton' onclick="retineUser()">Afiseaza</button>
+        <p id="knownUser"></p>
+        <button class="w3-button w3-black" id='logOutButton' onclick="forgetUser()">Sterge</button>
+
+    <ul id="imagini">
+      <li >Torturi Clasice.jpg</li>
+      <li >Mini Torturi.jpg</li>
+      <li> De Sezon.jpg</li>
+      <li >Personalizate.jpg</li>
+      <li >Speciale.jpg</li>
+    </ul>
+      <button class="w3-button w3-black" id="start">Vizioneaza!</button>
+
+
+  </div>
+</div>
+
+<button class="w3-button w3-black" id="b2"> Torturi si Prajituri</button> 
+<button class="w3-button w3-black" id="b3"">Inapoi <- </button> 
+<button class="w3-button w3-black" id="b4"> Inainte -> </button> 
+
+
+
+
+<!-- .........................Footer ............................-->
+
+
+<!-- Varianta 1  -->
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+  <img alt="logo"  style="width:15%;height:10%" src="Photos/icon.png"/>
+  <h3>- Cofetăria☆Serelinab -</h3>
+  <h5>Vă așteptăm!</h5>
+  <p>
+    <a href="https://www.facebook.com/cofetariaserelina/" class="fa fa-facebook"></a>
+    <a href="https://www.instagram.com/cofetariaserelina/" class="fa fa-instagram"></a>
+  </p>
+  <br> 
+  <a href="#Acasa" class="w3-button w3-black"><i class="fa fa-arrow-up w3-margin-right"></i>Acasa</a>
+</footer>
+
+
+<!-- ............................................................................ -->
+
+
+</body>
+
+</html>
