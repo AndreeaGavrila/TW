@@ -1,0 +1,825 @@
+
+body{
+    margin: 0;
+    padding: 0;  
+    font-family: "helvetica neue";
+    font-size: 18px;
+    height: 100%;
+    box-sizing: border-box;
+
+    background-color: var( --font-color);        /* background-color: #f9f9f9; */
+  }
+  
+nav {
+     background: var(--nav-color);
+      /* background: #390909; */
+      padding: .15em 0;
+      width: 100%;
+
+      /* position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 5; */
+
+      /* font-size: 18px; */
+  /* border: 1px solid rgba(0, 0, 0, 0.2); */
+  /* padding-bottom: 10px; */
+      
+}
+    
+nav ul {
+      display: flex;
+      list-style:none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+}
+  
+ul.sidenav {
+      list-style-type: none;
+      width: 25%;
+      position: fixed;
+      height: 100%;
+      overflow: auto;
+}
+  
+nav.nav-main {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 5;
+}
+  /* --------------------------------- */
+
+.main-nav {
+      list-style-type: none;
+      display: none;
+    }
+.nav-links, .logo {
+      text-decoration: none;
+      /* color: rgba(255, 255, 255, 0.7); */
+    }
+.logo {
+      display: inline-block;
+      font-size: 22px;
+      margin-top: 10px;
+      margin-left: 20px;
+    }
+    
+.navbar-toggle {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      cursor: pointer;
+      color: var(--nav-color);  /*  color: #390909; */
+      /* background: #390909 */
+      /* font-size: 24px; */
+    }  
+    
+.active {
+      display: block;
+    }
+
+    @media screen and (min-width: 768px) {
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0;
+        height: 70px;
+        align-items: center;
+      }
+    
+      .main-nav {
+        display: flex;
+        margin-right: 30px;
+        flex-direction: row;
+        justify-content: flex-end;
+      }
+
+      /* .main-nav li {
+            margin: 0;
+          }
+         */
+          /* .nav-links {
+            margin-left: 40px;
+          }
+         */
+          .logo {
+            margin-top: 0;
+          }
+        
+          .navbar-toggle {
+            display: none;
+          }
+          .logo:hover,
+          .nav-links:hover {
+            color: var(--bg--color);   /* color: rgba(255, 255, 255, 1); */
+
+          }
+        }
+        
+
+/* 
+.main-nav li {
+      text-align: center;
+      margin: 15px auto;
+    } */
+ /* -------------------------------- */
+
+
+nav ul li {
+      margin-left: 1.5em;
+      /* float: left; */
+  
+}
+  
+/* li:nth-last-child(1) { */
+    /* float: right; */
+/* } */
+  
+nav ul li a, .dropbtn, ul.sidenav li a {
+      text-decoration: none;
+      display: block;
+      text-align: center;
+      padding: 10px 11px;
+      display: block;
+      color: var(--bg--color);   /* color: white; */
+}
+  
+li a:hover:not(.active), .dropdown:hover .dropbtn, ul.sidenav li a:hover:not(.active) {
+  background-color: var( --primary-color);        /*   background-color: #AFA09A;  */
+      /* background-color: #093939; */
+}
+  
+/* .active { */
+      /* background-color: #AFA09A; */
+      
+/* } */
+  
+.focus:focus {
+      color: green;
+}
+    
+:target {
+  color: var( --secondary-color);              /*     color: #F4544A;    */
+}
+  
+  
+/* li.dropdown { */
+      /* display: contents; inline-block; */
+/* } */
+    
+.dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: var( --font-color);        /* background-color: #f9f9f9; */
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px #390909;
+      z-index: 1;
+}
+  
+.dropdown-content a {
+      color: var(--nav-color);  /*  color: #390909; */
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+}
+    
+.dropdown-content a:hover {
+  background-color: var(--bg--color);        /*  background-color: #f1f1f1; */
+}
+    
+.dropdown:hover .dropdown-content {
+      display: block;
+}
+  
+  
+nav.nav-sticky {
+      /* position: -webkit-sticky; */
+      position: sticky; 
+      top: 0px;
+      /* position: fixed; */
+      /* width: 100%; */
+      left: 0 ;
+      right: 0 ;
+      width: 100% ;
+       z-index: 5;
+}
+  
+
+  
+#header {
+      background: #f2c4e8; 
+      color: #390909;
+      /* color: #E52323; */
+      display: flex;
+      min-height: 100px;
+      min-width: 100px; 
+      justify-content: center;
+     align-items: center;
+      padding-top: 4%;
+      padding-bottom: 0%;
+}
+
+#hhheader {
+  background: #f2c4e8; 
+  color: #E52323;
+  display: inherit;
+  min-height: 100px;
+  min-width: 100px; 
+  justify-content: center;
+ align-items: center;
+  padding-top: 4%;
+  padding-bottom: 0%;
+}
+/* header img{
+        
+}
+*/
+/* #header h1 {
+      font-size: 100%;
+      justify-content: center;
+      align-items: center;
+}  */
+    
+article {
+      line-height: 1.5em;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 100rem;
+      padding-left: 1%;
+      padding-right: 1%;
+}
+    
+article h1 {
+      padding-top: 4.5%;
+}
+  
+div.content {
+      margin-left: 0%;
+      padding: 80px 130px;
+      /* height: 1000px; */
+}
+   
+
+@media screen and (max-width: 900px) {
+      ul.sidenav {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+}
+      
+ul.sidenav li a {
+        float: left;
+        padding: 15px;
+}
+      
+  
+@media screen and (max-width: 400px) {
+  ul.sidenav li a {
+        text-align: center;
+        float: none;
+  }
+}
+
+
+.div-video {
+      line-height: 1.5em;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      
+      max-width: 100rem;
+      padding-left: 5%;
+      padding-right: 5%;
+      padding-top: 5%;
+  
+      display: block;
+      position: static;
+  
+      width:100%;
+      height:100%;
+  
+      align-self: center;
+  
+}
+
+.yt-container {
+      position: relative;
+      padding-bottom:56.25%;
+      padding-top: 56.25%;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    
+      height:0;
+      overflow:hidden;
+      align-self: center;
+    
+}
+.yt-container embed {
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      align-content: center;
+      
+}
+
+/* .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+} */
+fa {
+      padding: 20px;
+      font-size: 30px;
+      width: 30px;
+      text-align: center;
+      text-decoration: none;
+      margin: 5px 2px;
+      border-radius: 50%;
+}
+    
+fa .fa:hover {
+     opacity: 0.7;
+}
+    
+fa .fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+fa .fa-instagram {
+    background: #125688;
+    color: white;
+}
+
+/* Medium screens */
+@media all and (min-width: 600px) {
+      /* We tell both sidebars to share a row */
+      .aside { flex: 1 auto; }
+}
+    
+/* Large screens */
+@media all and (min-width: 800px) {
+      /* We invert order of first sidebar and main
+      * And tell the main element to take twice as much width as the other two sidebars 
+       */
+           .main { flex: 2 0px; }
+           .aside-1 { order: 1; }
+           .main    { order: 2; }
+           .aside-2 { order: 3; }
+           .footer  { order: 4; }
+}
+
+
+
+
+
+
+
+
+
+
+/* --------------------- Pagina Torturi-Prajituri ------------ */
+
+
+* {
+      box-sizing: border-box;
+    }
+    
+    /* Position the image container (needed to position the left and right arrows) */
+    .container {
+      position: relative;
+    }
+
+    
+    /* Hide the images by default */
+    .mySlides, .mySlides2 {
+      display: none;
+    }
+    
+    /* Add a pointer when hovering over the thumbnail images */
+    .cursor, .cursor2 {
+      cursor: pointer;
+    }
+    
+    /* Next & previous buttons */
+    .prev,.next {
+      cursor: pointer;
+      position: inherit;
+      top: 40%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+       color: var(--nav-color);  /* color: #390909;*/
+      font-weight: bold;
+      font-size: 20px;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      /* -webkit-user-select: none; */
+    }
+    
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      /* left:260px; */
+      border-radius: 3px 0 0 3px;
+    }
+    
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,.next:hover {
+      background-color: var(--heading-color);      /* background-color: #eecaac; */
+    }
+    
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: var(--nav-color);          /* color: #390909; */
+      font-size: 16px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+    
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    /* Six columns side by side */
+    .column {
+      float: left;
+      width: 7%;
+    }
+    
+    /* Add a transparency effect for thumnbail images */
+    .demo, .demo2 {
+      opacity: 0.6;
+    }
+    
+    .active,.demo:hover, .demo2:hover {
+      opacity: 1;
+    }
+
+
+/* -------------- Pagina Index ------------------------- */
+
+
+body, html {
+      height: 100%;
+      font-family: "Inconsolata", "sans-serif";
+      }
+          
+      .menu {
+      display: none;
+      }
+  
+      .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+      }
+  
+      * {
+      box-sizing: border-box;
+      /* box-sizing: content-box; */
+
+      }     
+  
+  
+      /* The grid: Four equal columns that floats next to each other */
+      /* .column {
+            float: left;
+            width: 25%;
+            padding: 10px;
+      }
+           */
+      /* Style the images inside the grid */
+      /* .column img {
+            opacity: 0.8;
+            cursor: pointer;
+      }
+          
+      .column img:hover {
+            opacity: 1;
+      }
+           */
+      /* Clear floats after the columns */
+      /* .row:after {
+            content: "";
+            display: table;
+            clear: both;
+      } */
+  
+     
+      .row {
+      /* display: -ms-flexbox; IE10 */
+      display: flex;
+        /* display: flow-root; */
+      /* -ms-flex-wrap: wrap; IE10 */
+      flex-wrap: wrap;
+      padding: 0 4px;
+      }
+  
+      
+      /* Create four equal columns that sits next to each other */
+      .column {
+        /* -ms-flex: 25%; IE10 */
+        flex: 25%;
+        max-width: 25%;
+        padding: 0 4px;
+      }
+  
+      .column img {
+        margin-top: 8px;
+        vertical-align: middle;
+        width: 100%;
+      }
+  
+  
+  
+      /* Responsive layout - makes a two column-layout instead of four columns */
+      @media screen and (max-width: 800px) {
+        .column {
+          /* -ms-flex: 50%; */
+          flex: 50%;
+          max-width: 50%;
+        }
+      }
+  
+      /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 600px) {
+        .column {
+          /* -ms-flex: 100%; */
+          flex: 100%;
+          max-width: 100%;
+        }
+      }
+
+      
+
+      /* ...........Formular contact................... */
+      form {
+        width: 300px;
+        /* background: #fff; */
+        padding: 15px 40px 40px;
+        /* border: 1px solid #ccc; */
+        margin: 50px auto 0;
+        border-radius: 5px;
+    }
+    label {
+        display: block;
+        margin-bottom: 5px
+    }
+    label i {
+        /* color: #999; */
+        font-size: 80%;
+    }
+    input, select {
+        /* border: 1px solid #ccc; */
+        padding: 10px;
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 2px;
+    }
+    .row {
+        padding-bottom: 10px;
+    }
+    .form-inline {
+        /* border: 1px solid #ccc; */
+        padding: 8px 10px 4px;
+        border-radius: 2px;
+    }
+    .form-inline label, .form-inline input {
+        display: inline-block;
+        width: auto;
+        padding-right: 15px;
+    }
+    .error {
+        /* color: rgb(201, 110, 5); */
+        color: #F4544A;
+        font-size: 95%;
+    }
+    input[type="submit"] {
+        font-size: 110%;
+        font-weight: 100;
+        background: #006dcc;
+        border-color: #016BC1;
+        box-shadow: 0 3px 0 #0165b6;
+        /* color: #fff; */
+        margin-top: 10px;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background: #0165b6;
+    }
+    /* ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, */
+
+
+
+
+      #logOutButton{
+            display: none;
+        }
+
+
+/*................animatie Slow-Zoom la imagini...........*/
+
+
+    /* [1] The container */
+.img-hover-zoom {
+  /* height: 300px; [1.1] Set it as per your need */
+  overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+}
+
+/* [2] Transition property for smooth transformation of images */
+.img-hover-zoom img {
+  transition: transform .5s ease;
+}
+
+/* [3] Finally, transforming the image when container gets hovered */
+.img-hover-zoom:hover img {
+  transform: scale(1.5);
+}
+
+
+/* Slow-motion Zoom Container */
+.img-hover-zoom--slowmo img {
+  transform-origin: 50% 65%;
+  transition: transform 5s, filter 3s ease-in-out;
+  filter: brightness(150%);
+}
+
+/* The Transformation */
+.img-hover-zoom--slowmo:hover img {
+  filter: brightness(100%);
+  transform: scale(3);
+}
+/* ..................................................... */
+
+/*........................Change to Dark Mode............. */
+/* @import url(https://fonts.googleapis.com/css?family=Lato:400,400italic,700|Sansita+One); */
+
+:root {
+                     
+          /* am inlocuit cu structura urmatoare toate culorile  */
+              /* color: var( --primary-color);
+              color: var( --secondary-color);
+              color: var( --font-color);
+              color: var(--bg--color);
+              color: var(--heading-color);
+              color: var(--nav-color); */
+
+
+            --primary-color: #AFA09A;
+            --secondary-color: #F4544A;
+            --font-color: #f9f9f9;
+            --bg--color: #f1f1f1;
+            --heading-color: #eecaac;
+            --nav-color: #390909;
+           
+           /* culorile din dark mode */
+            /* --primary-color: #9E908B;
+            --secondary-color: #F78780;
+            --font-color: #959595;
+            --bg--color: #6C6C6C;
+            --heading-color: #6B5B4D;
+            --nav-color: #745353; */
+}
+body {
+  background-color: var(--bg-color);
+  color: var(--nav-color);
+}
+
+h1 {
+    color: var(--heading-color);
+}
+
+a {
+  color: var(--primary-color);
+}
+
+.post-meta {
+  color: var(--secondary-color);
+}
+
+
+
+ /* ........................Toggle Button.................*/
+.cm-toggle {
+	-webkit-appearance: none;
+	-webkit-tap-highlight-color: transparent;
+	position: relative;
+	border: 0;
+	outline: 0;
+	cursor: pointer;
+	margin: 10px;
+}
+
+
+/* To create surface of toggle button */
+.cm-toggle:after {
+	content: '';
+	width: 60px;
+	height: 28px;
+	display: inline-block;
+	background: rgba(196, 195, 195, 0.55);
+	border-radius: 18px;
+	clear: both;
+}
+
+
+/* Contents before checkbox to create toggle handle */
+.cm-toggle:before {
+	content: '';
+	width: 32px;
+	height: 32px;
+	display: block;
+	position: absolute;
+	left: 0;
+	top: -3px;
+	border-radius: 50%;
+	background: rgb(255, 255, 255);
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+
+/* Shift the handle to left on check event */
+.cm-toggle:checked:before {
+	left: 32px;
+	box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+/* Background color when toggle button will be active */
+.cm-toggle:checked:after {
+	background: #16a085;
+}
+
+
+
+/* Transition for smoothness */
+.cm-toggle,
+.cm-toggle:before,
+.cm-toggle:after,
+.cm-toggle:checked:before,
+.cm-toggle:checked:after {
+	transition: ease .3s;
+	-webkit-transition: ease .3s;
+	-moz-transition: ease .3s;
+  -o-transition: ease .3s;}
+  
+
+
+  /* <!-- ...............TITLU ..............  --> */
+
+  .ml5 {
+    position: relative;
+    font-weight: 300;
+    font-size: 3.5em;
+    color: #390909;
+  }
+  
+  .ml5 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.1em;
+    padding-right: 0.05em;
+    padding-bottom: 0.15em;
+    line-height: 1em;
+    background-color: #eecaac;
+  }
+  
+  .ml5 .line {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 3px;
+    width: 100%;
+    background-color: #402d2d;
+    transform-origin: 0.5 0;
+  }
+  
+  .ml5 .ampersand {
+    font-family: Baskerville, serif;
+    font-style: italic;
+    font-weight: 400;
+    width: 1em;
+    margin-right: -0.1em;
+    margin-left: -0.1em;
+  }
+  
+  .ml5 .letters {
+    display: inline-block;
+    opacity: 0;
+  }

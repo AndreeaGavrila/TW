@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+
+<head>
+
+    <title>Cofetaria Serelina</title>
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="/w3.css" /> -->
+
+    <link rel="shortcut icon" type="image/png" href="/Photos/Icon.png">
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="form-style.css"> -->
+
+    <script src="/java.js"></script> 
+    <script src="/j2.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+
+</head>
+
+
+
+<body>
+  
+<!-- ............................Nav Bar ......................... -->
+<!-- /////////////////////....Vechi...///////////////////////// --> 
+
+ <!-- <nav class="nav-main " id="nav"> -->
+  <nav class="nav-main">
+
+
+    <!-- <nav class=" navbar navbar-inverse" id="nav"> -->
+
+
+     <!-- --------------------------------------- -->
+
+     <span class="navbar-toggle" id="js-navbar-toggle">
+      <i class="fas fa-bars"></i>
+    </span>
+  
+  <!-- <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" style="color:green;" 
+               data-toggle="collapse" data-target="#myNavbar" onclick="menu()">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Cofetăria☆Serelina</a>
+      </div> -->
+  <!-- <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#lexikon-navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="startseite.html">WebSiteName</a>
+    </div> -->
+  <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon">
+      </span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02"> -->
+  <!-- Collapse button -->
+  <!-- <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
+    aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i
+        class="fas fa-bars fa-1x"></i></span></button> -->
+  <!-- Collapsible content -->
+  <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent1"> -->
+  <!-- <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav"> -->  
+  <!-- <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button> -->
+  <!-- <div class="row"> -->
+  <!-- <button  > <a href="/login">Login<span class="glyphicon glyphicon-user"></span></a> </button> -->
+  <!-- </div> -->
+
+
+
+<!-- ..................................................................... -->
+
+  <!-- <ul class="main-nav"  id="js-menu" style="margin-left: 1.5em; float:right;">  -->
+    <ul class="main-nav"  id="js-menu">
+
+  
+
+    <!-- <li> <button class="w3-button w3-black" id="b10" style="float: left;" > 
+      <a href="/caddUsers.html">Comanda acum!</a></button> </li>
+   -->
+  
+      <!-- .............Ceasul................. -->
+      
+        <p id="demo" style="color: rgb(220, 76, 67);"></p>
+      
+      <script>
+        var myVar = setInterval(myTimer, 1000);
+        
+        function myTimer() {
+          var d = new Date();
+          document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+        }
+        </script>
+      
+      <li class="active" ><a href="#Acasa" class=" nav-links w3-block ">Acasa</a></li>
+  
+      <li class="dropdown">
+            <a href="#PovesteaNoastra" class="nav-links dropbtn">Povestea Noastra
+              <span class="caret"></span>
+            </a>
+  
+            <div class="dropdown-content">
+              <a href="#Deschidere">Deschidere</a>
+              <a href="#Vitrinanoastra">Vitrina noastra</a>
+            </div>
+      </li>
+  
+      <li class="dropdown">
+              <!-- <a href="javascript:void(0)" class="dropbtn">Produsele noastre</a> -->
+              <a href="#ProduseleNoastre" class="nav-links dropbtn">Produsele Noastre</a>
+  
+              <div class="dropdown-content">
+                <a href="#Torturi">Torturi</a>
+                <a href="#Prajituri">Prajituri</a>
+                <a href="#ProduseSpeciale">Produse Speciale</a>
+                <a href="#ProdusedePost">Produse de Post</a>
+              </div>
+      </li>
+
+      <li><a href="#Contact" class="nav-links" >Contact</a></li>
+      <li><a href="Torturi-Prajituri.html" class="nav-links w3-block ">Torturi - Prajituri</a></li>
+    </ul>
+  
+  </nav>
+  
+      <!-- <li class="dropdown">
+              <a href="javascript:void(0)" class="dropbtn">Produsele noastre</a>
+              <a href="#ProduseleNoastre" class="nav-links dropbtn">Produsele Noastre</a>
+  
+              <div class="dropdown-content">
+                <a href="#Torturi">Torturi</a>
+                <a href="#Prajituri">Prajituri</a>
+                <a href="#ProduseSpeciale">Produse Speciale</a>
+                <a href="#ProdusedePost">Produse de Post</a>
+  
+  
+              </div>
+      </li>
+      <li><a href="#Contact" class="nav-links" >Contact</a></li>
+      <li><a href="/Torturi-Prajituri.html" class="nav-links w3-block ">Torturi - Prajituri</a></li>
+    </ul>
+  
+  </nav> -->
+  <!-- //////////////////////////////////////////////////////// -->
+<!-- ------------------------------------------------------ -->
+
+
+<div id="Acasa">
+  <div id="header">
+    <img  alt="Coperta" style="width:60%;height:60%" src="/Photos/cover.jpg"/>
+  </div> 
+</div>
+
+
+
+
+<!-- ........................................................................... -->
+
+<!-- <div class="w3-container"  >
+  <div class="w3-content" style="max-width:700px">
+
+    <button class="w3-button w3-black" id="b10" > <a href="/caddUsers.html">Comanda acum!</a></button> 
+   
+  </div></div> -->
+
+  <!-- ...........................TITLU................................. -->
+
+  <div class="w3-container" >
+    <div class="w3-content" style="max-width:700px"> 
+  
+    <h2 class="ml5">
+    <span class="text-wrapper">
+      <span class="line line1"></span>
+      <span class="letters letters-left">- Cofetăria</span>
+      <span class="letters ampersand">☆</span>
+      <span class="letters letters-right">Serelina -</span>
+      <span class="line line2"></span>
+    </span>
+    </h2>
+    </div>
+  </div>
+  
+
+  <script>
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml5 .line',
+    opacity: [0.5,1],
+    scaleX: [0, 1],
+    easing: "easeInOutExpo",
+    duration: 700
+  }).add({
+    targets: '.ml5 .line',
+    duration: 600,
+    easing: "easeOutExpo",
+    translateY: (el, i) => (-0.625 + 0.625*2*i) + "em"
+  }).add({
+    targets: '.ml5 .ampersand',
+    opacity: [0,1],
+    scaleY: [0.5, 1],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=600'
+  }).add({
+    targets: '.ml5 .letters-left',
+    opacity: [0,1],
+    translateX: ["0.5em", 0],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=300'
+  }).add({
+    targets: '.ml5 .letters-right',
+    opacity: [0,1],
+    translateX: ["-0.5em", 0],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=600'
+  }).add({
+    targets: '.ml5',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+  
+
+
+  </script>
+
+
+<!-- ........................................................................... -->
+
+
+
+
+
+
+<div>
+  <button class="w3-button w3-black" id="b10" > <a href="/caddUsers.html">Comanda acum!</a></button> 
+
+
+
+  <!-- .......Aparitie treptata Detalii Happy Hours ...... -->
+  
+  <button  class="w3-button w3-pink"  onclick="typeWriter()"> Happy Hours! </button>
+
+  <p id="text"></p>
+
+  <script>
+  var i = 0;
+  var txt = '( --------->  ( zilnic intre 10:00-11:30 sau 17:00-17:50 )';
+  var speed = 60;
+
+  function typeWriter() {
+    if (i < txt.length) {
+      document.getElementById("text").innerHTML += txt.charAt(i);
+      i++;
+      setTimeout(typeWriter, speed);
+    }
+  }
+  </script>
+  
+  <!-- .........Happy Hours ........  -->
+
+  <p id="HH"> </p>
+
+   <script>
+
+  function test(){
+    var date=new Date();  
+    var start=new Date(date.getFullYear(), date.getMonth(), date.getDate(), 10,0,0,0);
+    var final=new Date(date.getFullYear(), date.getMonth(), date.getDate(), 11,30,0,0,0);
+
+
+     if( start.getTime() <= date.getTime()  &&  date.getTime()  <=  final.getTime())
+      //intre 10:00 si 11:30
+    { 
+      // document.write('Happy hours! Avem oferte de dimineata! ');
+      document.getElementById("HH").innerHTML = 'Happy hours! Avem oferte de dimineata! '
+       + '<br />' + '( zilnic intre 10:00-11:30 )';
+      clearInterval();
+    }
+
+    else if(date.getHours()  == 17 && date.getMinutes()  <= 50)
+    { // intre 17:00 si 17:50
+    
+        // document.write('Happy hours! Avem ultimele promotii! ');
+        document.getElementById("HH").innerHTML = 'Happy hours! Avem ultimele promotii!' 
+        + '<br />' + '( zilnic intre 17:00-17:50 )';
+        clearInterval();
+    }
+    else
+    {
+      // document.write('Oops, incearca sa prinzi maine noile oferte! :) ');
+      document.getElementById("HH").innerHTML = 'Oops, incearca sa prinzi maine noile oferte Happy Hours :)';
+      clearInterval();
+    }
+
+    }
+    test();
+  
+  </script>  
+
+<!-- .......colorare text din p.... -->
+<script>
+  var pl4=document.getElementsByTagName("p");
+  for(let i=0;i<pl4.length;i++)
+  setTimeout(function()
+  {
+    colorare4("#DC4C43",pl4[i]);
+  }, 500*(i+1));
+
+function colorare4(culoare4,ob)
+{
+ ob.style.color=culoare4;
+}
+</script>
+
+<br>
+
+  <!-- ..........Dark Mode................ -->
+
+  <input type="checkbox" id="checkboxTheme" class="cm-toggle"/>
+<em>Incearca modul Dark!</em>
+</div>
+
+
+
+
+
+
+
+
+<!-- .................Cuprins................. -->
+<div class="w3-container" >
+  <div class="w3-content" style="max-width:700px"> 
+    <h5 class="w3-center " style="padding-top: 64px!important;padding-bottom:0;"><span class="w3-tag w3-wide">Cuprins</span></h5>
+
+
+
+    <ul class="parentt"  style="margin-left: 1.5em; float:left; line-height:2.5; font-size: 17px; list-style-type: none; overflow: hidden; ">
+
+       <li class="childd" style="float: left;" >
+        <a href="/index.html" class=" nav-links " style="display: block; text-align: center; padding: 20px; text-decoration: none;">Acasa</a></li>
+
+
+       <li class="childd dropdown" style="float: left;" >
+          <a href="#PovesteaNoastra" class="nav-links " style="display: block; text-align: center; padding: 20px; text-decoration: none;">Povestea Noastra
+          <span class="caret"></span></a>
+
+        <div class="dropdown-content">
+          <a  class="childd" href="#Deschidere">Deschidere</a>
+          <a  class="childd" href="#Vitrinanoastra">Vitrina noastra</a>
+        </div>
+        </li>
+      
+
+       <li class="childd dropdown" style="float: left;" > 
+        <a href="#ProduseleNoastre" class="nav-links " style="display: block; text-align: center; padding: 20px; text-decoration: none;">Produsele Noastre</a>
+
+        <div class="dropdown-content">
+          <a class="childd" href="#Torturi">Torturi</a>
+          <a class="childd" href="#Prajituri">Prajituri</a>
+          <a class="childd" href="#ProduseSpeciale">Produse Speciale</a>
+          <a class="childd" href="#ProdusedePost">Produse de Post</a>
+        </div>
+        </li>
+
+
+       <li class="childd" style="float: left;">
+         <a href="#Contact" class="nav-links" style="display: block; text-align: center; padding: 20px; text-decoration: none;" >Contact</a></li>
+ 
+
+        </ul>
+        
+        <!-- colorare items din cuprins la cateva sec -->
+        <script>
+          var pl3=document.getElementsByTagName("li");
+          for(let i=0;i<pl3.length;i++)
+          setTimeout(function()
+          {
+            colorare3("#DC4C43",pl3[i]);
+          }, 700*(i+1));
+        
+        function colorare3(culoare3,ob)
+        {
+         ob.style.color=culoare3;
+        }
+        </script>
+
+
+        
+
+    <!-- evidentiere item din cuprins -->
+    <style>
+      .parentt{ overflow: hidden; }
+      .childd{ cursor: pointer;background-color:#ddd;}
+              
+      .bakk{ background-color: #eecaac;; color: #fff; font-weight:bold; }
+   
+    </style>
+  
+    <script>
+    var elements = document.getElementsByClassName("childd");
+    for(var i=0; i<elements.length; i++ )
+    {
+      elements[i].onclick = function(){
+        //remove class from sibling
+        var el = elements[0];
+        while(el)
+        {
+          if(el.tagName === "LI"){
+              //remove class
+              el.classList.remove("bakk");
+
+          }
+          //pass to the new sibling
+          el = el.nextSibling;
+        }
+          this.classList.add("bakk");
+      };
+    }
+
+    </script>
+
+
+  </div>
+</div>
+
+
+
+
+
+<div>  
+  <!-- <button  > <a href="/login">Login<span class="glyphicon glyphicon-user"></span></a> </button> -->
+
+
+<style>
+  /* body {font-family: Arial, Helvetica, sans-serif;} */
+  
+  /* Full-width input fields */
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  /* Set a style for all buttons */
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    /* width: 100%; */
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Extra styles for the cancel button */
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+  }
+  
+  /* Center the image and position the close button */
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+  }
+  
+  img.avatar {
+    width: 40%;
+    border-radius: 50%;
+  }
+  
+  .container {
+    padding: 16px;
+  }
+  
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 60%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button (x) */
+  .close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: red;
+    cursor: pointer;
+  }
+  
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+    
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
+  
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+  }
+  </style>
+
+<!-- <h2>Modal Login Form</h2> -->
+
+<!-- <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button> -->
+    
+    <div id="id01" class="modal">
+      
+      <form class="modal-content animate" action="/action_page.php" method="post">
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+          <img src="/Photos/Avatar.png" alt="Avatar" class="avatar">
+        </div>
+    
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+    
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+            
+          <button type="submit">Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+        </div>
+    
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+          <!-- <span class="psw">Forgot <a href="#">password?</a></span> -->
+        </div>
+      </form>
+    </div>
+    
+    <script>
+    // Get the modal
+    var modal = document.getElementById('id01');
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    </script>
+
+</div>
+
+
+
+<!-- <div class="w3-container"  > -->
+  <!-- <div class="w3-content" style="max-width:700px"> -->
+    <!-- <button class="w3-button w3-black" id="b10" > <a href="/caddUsers.html">Comanda acum!</a></button>  -->
+      <!-- <button class="w3-button w3-black" id="b2"> <a href="/Torturi-Prajituri.html">Torturi si Prajituri</a></button> -->
+      <!-- <button class="w3-button w3-black" id="b3" >Inapoi <- </button> 
+      <button class="w3-button w3-black" id="b4"> Inainte -> </button>  -->
+  <!-- </div> -->
+<!-- </div> -->
+
+
+<!-- About Container -->
+<div class="w3-container" id="PovesteaNoastra">
+    <div class="w3-content" style="max-width:700px">
+      <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">Povestea Noastra</span></h5>
+      <!-- <img src="photo(2).jpg" style="width:50%;max-width:1000px" class="w3-margin-top"> -->
+    </div>
+</div>
+
+
+<!-- ..............................Prezentare Deschidere & Vitrina noastra........................ -->
+
+
+<div class="w3-container" id="Deschidere">
+  <div class="w3-content" style="max-width:700px">
+    <h4 class="w3-padding-32"><span class="w3-tag w3-wide">Deschidere</span></h4>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column">    <div class="img-hover-zoom img-hover-zoom--slowmo">
+    <img style="height:450px;width:100%" src="/Photos/Desch1.jpg" alt="Deschidere" >
+  </div> </div>
+  <div class="column">    <div class="img-hover-zoom img-hover-zoom--slowmo">
+    <img style="height:450px;width:100%" src="/Photos/Desch2.jpg" alt="Deschidere" >
+  </div> </div>
+  <div class="column">    <div class="img-hover-zoom img-hover-zoom--slowmo">
+    <img style="height:450px;width:100%" src="/Photos/Desch3.jpg" alt="Deschidere" >
+  </div> </div>
+  <div class="column">    <div class="img-hover-zoom img-hover-zoom--slowmo">
+    <img style="height:450px;width:100%" src="/Photos/Desch4.jpg" alt="Deschidere" >
+  </div> </div>
+</div>
+
+<!-- <div class="w3-row-padding">
+
+  <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-display-container">
+
+      <div class="img-hover-zoom img-hover-zoom--slowmo">
+        <img style="height:450px;width:100%" src="/Photos/Desch1.jpg" alt="Deschidere" >
+      </div>
+      <br> 
+      <div class="img-hover-zoom img-hover-zoom--slowmo">
+        <img style="height:450px;width:100%" src="/Photos/Desch2.jpg" alt="Deschidere" >
+      </div>
+      <div class="img-hover-zoom img-hover-zoom--slowmo">
+        <img style="height:450px;width:100%" src="/Photos/Desch3.jpg" alt="Deschidere" >
+      </div>
+      <br> 
+      <div class="img-hover-zoom img-hover-zoom--slowmo">
+        <img style="height:450px;width:100%" src="/Photos/Desch4.jpg" alt="Deschidere" >
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-display-container">
+
+      <div class="img-hover-zoom img-hover-zoom--slowmo">
+        <img style="height:250px;width:100%" src="/Photos/Vitrina1.jpg" alt="Vitrina noastra" >
+      </div>
+      <br> 
+      <div class="img-hover-zoom img-hover-zoom--slowmo">
+        <img style="height:250px;width:100%" src="/Photos/Vitrina2.jpg" alt="Vitrina noastra" >
+      </div>
+      <div class="img-hover-zoom img-hover-zoom--slowmo">
+        <img style="height:250px;width:100%" src="/Photos/Vitrina3.jpg" alt="Vitrina noastra" >
+      </div>
+      <br> 
+      <div class="img-hover-zoom img-hover-zoom--slowmo">
+        <img style="height:250px;width:100%" src="/Photos/Vitrina4.jpg" alt="Vitrina noastra" >
+      </div>
+    </div>
+  </div>
+
+</div> -->
+
+
+<!-- //----------------------------------------------------------------------- -->
+
+<div class="w3-container" id="Vitrinanoastra">
+  <div class="w3-content" style="max-width:700px">
+    <h4 class="w3-padding-32"><span class="w3-tag w3-wide">Vitrina Noastra</span></h4>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column">    <div class="img-hover-zoom img-hover-zoom--slowmo">
+    <img style="height:250px;width:100%" src="/Photos/Vitrina1.jpg" alt="Vitrina noastra" >
+  </div></div>
+  <div class="column">    <div class="img-hover-zoom img-hover-zoom--slowmo">
+    <img style="height:250px;width:100%" src="/Photos/Vitrina2.jpg" alt="Vitrina noastra" >
+  </div></div>
+  <div class="column">    <div class="img-hover-zoom img-hover-zoom--slowmo">
+    <img style="height:250px;width:100%" src="/Photos/Vitrina3.jpg" alt="Vitrina noastra" >
+  </div></div>
+  <div class="column">    <div class="img-hover-zoom img-hover-zoom--slowmo">
+    <img style="height:250px;width:100%" src="/Photos/Vitrina4.jpg" alt="Vitrina noastra" >
+  </div></div>
+</div>
+
+<br> 
+
+
+
+<!-- .....................................Meniu Produse......................................... -->
+
+
+<!-- Menu Container -->
+<div class="w3-container" id="ProduseleNoastre">
+  
+  <div class="w3-content" style="max-width:700px">
+   
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Produsele noastre</span></h5>
+   
+    <!-- <img src="photo(1).jpg" style="width:50%;max-width:1000px" class="w3-margin-top"> -->
+   <br>   
+    
+    
+    <div class="w3-row w3-center w3-card w3-padding">
+
+
+      <a href="javascript:void(0)" onclick="openMenu(event, '1Torturi');" >
+        <div class="w3-col s6 tablink"><p>Torturi</p></div>
+      </a>
+   
+      <a href="javascript:void(0)" onclick="openMenu(event, '2Prajituri');" > 
+        <div class="w3-col s6 tablink">
+          <p>Prajituri</p></div>
+      </a>
+    </div>
+
+    <div class="w3-row w3-center w3-card w3-padding">
+      <a href="javascript:void(0)" onclick="openMenu(event, '3ProduseSpeciale');" >
+        <div class="w3-col s6 tablink">
+          <p>Produse Speciale</p></div>
+         
+      </a>
+
+      <a href="javascript:void(0)" onclick="openMenu(event, '4ProdusedePost');" >
+        <div class="w3-col s6 tablink">
+          <p>Produse de Post</p></div>
+      </a>
+    </div>  
+ 
+
+    <div id="1Torturi" class="w3-container menu w3-padding-48 w3-card">
+        <h5>☆Tort trio chocolate</h5>
+        <h5>☆Tort decorat cu felii de pară caramelizate</h5>
+        <h5>☆Tort cu cremă de iaurt cu fructe de pădure</h5>
+        <h5>☆Tort cu blat de nucă, caramel și bucăți de nucă întreagă</h5>
+        <h5>☆Tort cu crema de lapte, vișine întregi și mousse de fructe de pădure</h5>
+        <h5>☆Tort diplomat</h5>
+        <br>
+        <h5>☆Tort cu mousse de ciocolată și vișine întregi</h5>
+        <h5>☆Tort cu mousse de ciocolată și mentă</h5>
+        <h5>☆Tort cu mousse de ciocolată și cremă de lapte</h5>
+        <h5>☆Tort cu mousse de fructe de pădure</h5>
+        <br>
+        <h5>☆Tort "18". Cremă de mascarpone și mousse de ciocolată (se pot realiza asemenea torturi pe orice număr/cifră)</h5>
+        <h5>☆Tort sugar free - perfect pentru persoanele ce suferă de diabet!</h5>
+        <br>
+        <h5>☆Tort unicorn cu decor de cremă de unt</h5>
+        <h5>☆Tort curcubeu cu cremă mascarpone și dulceață de fructe de pădure</h5>
+        <h5>☆Tort cu foaie icing</h5>
+        <h5>☆Tort Barbie și cupcakes cu prințesele Disney</h5>
+    </div>
+
+    <div id="2Prajituri" class="w3-container menu w3-padding-48 w3-card">
+        <h5>☆prăjiturile asortate "Sereline" - semnătura cofetăriei noastre</h5>
+        <h5>☆Sereline cu nucă/mentă</h5>
+        <br>
+        <h5>☆inimoare cu mousse de ciocolată și fructe de pădure</h5>
+        <h5>☆ruladă cu iaurt și fructe de pădure</h5>
+        <h5>☆monoporții de trio chocolate</h5>
+        <br>
+        <h5>☆savarine cu frișcă naturală</h5>
+        <h5>☆prăjitură diplomat</h5>
+        <h5>☆prăjitura boema</h5>
+        <h5>☆tiramisu la pahar: clasic sau cu fructe</h5>
+        <h5>☆ecler cu: cafea/ vanilie/ ciocolată și cireșe amarene/ caramel/ fistic/ fructe de pădure</h5>
+        <br>
+        <h5>☆prăjitură kinder felie de lapte</h5>
+        <h5>☆prăjitură nesscake</h5>
+        <h5>☆cheesecake copt cu mure</h5>
+        <h5>☆brioșe cu ciocolată</h5>
+        <h5>☆bomboane raffaello/ glazurate/ cu unt de arahide si dulceață de ardei iute</h5>
+        <br>
+        <h5>☆mini ecleruri: vanilie sau caramel</h5>
+        <h5>☆mini tarte cu fructe</h5>
+        <h5>☆mini amandine</h5>
+        <h5>☆mini tarte cu fructe</h5>
+        <h5>☆mini tort cu nucă și caramel</h5>
+        <h5>☆mini tort diplomat</h5>
+        <br>
+        <h5>☆fursecuri cu: nucă/ gem de caise/ nucă de cocos</h5>
+        <h5>☆paleuri cu ciocolată sau gem</h5>
+        <h5>☆pricomigdale simple sau cu ciocolată</h5>
+        <h5>☆saleuri</h5>
+        <h5>☆bezele</h5>
+    </div>
+
+    <div id="3ProduseSpeciale" class="w3-container menu w3-padding-48 w3-card">
+        <h5>☆Mucenici moldovenești</h5>
+        <h5>☆Torturi tematice  de ziua femeii - în forma cifei opt conține mousse de fructe de padure și ciocolată fiind decorate cu flori comestibile</h5>
+        <h5>☆Mărțisoare dulci - O inimioară conține blat de cacao, mousse de fructe de pădure, de ciocolată și cremă de lămâie</h5>
+        <br>
+        <h5>☆Torturi in formă de inimă</h5>
+        <h5>☆Monoporții în formă de inimioară</h5>
+        <br>
+        <h5>☆Cozonac dulce/ de post</h5>
+        <h5>☆Chec de casă</h5>
+        <h5>☆Tortul "Buturugă de ciocolată"</h5>
+    </div>
+
+    <div id="4ProdusedePost" class="w3-container menu w3-padding-48 w3-card">
+        <h4>☆Torturi de post cu creme de:</h4>
+        <h5>•ciocolată</h5>
+        <h5>•mango</h5>
+        <h5>•vișine</h5>
+        <h5>•lămăie verde cu scorțișoară</h5>
+        <h5>•zmeură</h5>
+        <h5>•caramel</h5>
+        <br>
+        <h4>☆Prajituri de post:</h4>
+        <h5>•prăjitură cu bulion, griș și gem de prune</h5>
+        <h5>•prăjitură cu bulion, mere și gem</h5>
+        <h5>•biluțe cu vișine sau alune</h5>
+        <h5>•fursecuri cu cocos/nucă/gem de vișine</h5>
+        <h5>•tăvălită</h5>
+        <h5>•prăjitură cu ness</h5>
+        <h5>•prăjitură cu fructe de pădure</h5>
+        <h5>•salam de biscuiți</h5>
+        <h5>•prăjitură cu vișine și ciocolată amăruie</h5>
+        <br>
+        <h4>☆Speciale:</h4>
+        <h5>•Cozonacul de post</h5>
+        <h5>•Mucenici moldovenești</h5>
+    </div>
+
+  </div> 
+</div>  
+
+<br>   
+
+
+
+
+<!-- ....................................Poze Produse dupa Meniu................................. -->
+
+<div class="w3-row-padding">
+
+  <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-display-container">
+      <div class="w3-display-topleft w3-black w3-padding" id="Torturi">Torturi</div>
+      <div class="img-hover-zoom img-hover-zoom--slowmo"><img src="/Photos/Torturi1.jpg" alt="Torturi1" style="width:100%"></div>
+      <br> 
+      <div class="img-hover-zoom img-hover-zoom--slowmo"><img src="/Photos/Torturi2.jpg" alt="Torturi2" style="width:100%"></div>
+
+    </div>
+  </div>
+
+  
+  <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-display-container">
+      <div class="w3-display-topleft w3-black w3-padding" id="Prajituri">Prajituri</div>
+      <div class="img-hover-zoom img-hover-zoom--slowmo"><img src="/Photos/Prajituri1.jpg" alt="Prajituri1" style="width:100%"></div>
+      <br> 
+      <div class="img-hover-zoom img-hover-zoom--slowmo"><img src="/Photos/Prajituri2.jpg" alt="Prajituri2" style="width:100%"></div>
+
+    </div>
+  </div>
+
+  <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-display-container">
+      <div class="w3-display-topleft w3-black w3-padding" id="ProduseSpeciale">Produse Speciale</div>
+      <div class="img-hover-zoom img-hover-zoom--slowmo"><img src="/Photos/ProdSpec1.jpg" alt="ProduseSpeciale1" style="width:100%"></div>
+      <br> 
+      <div class="img-hover-zoom img-hover-zoom--slowmo"><img src="/Photos/ProdSpec2.jpg" alt="ProduseSpeciale2" style="width:100%"></div>
+
+    </div>
+  </div>
+  <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-display-container">
+      <div class="w3-display-topleft w3-black w3-padding" id="ProdusedePost">Produse de Post</div>
+      <div class="img-hover-zoom img-hover-zoom--slowmo"><img src="/Photos/ProdPost1.jpg" alt="Prajituri1" style="width:100%"></div>
+      <br> 
+      <div class="img-hover-zoom img-hover-zoom--slowmo"><img src="/Photos/ProdPost2.jpg" alt="Prajituri2" style="width:100%"></div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ........................................................................... -->
+
+
+
+<!-- Contact/Area Container -->
+<div class="w3-container" id="Contact" style="padding-bottom:32px;">
+  <div class="w3-content" style="max-width:700px">
+    
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Contact</span></h5>
+    
+    <p><span class="w3-tag">Program:</span>
+       <strong>Luni:închis, Marti-Sâmbătă:10-18, Duminică:11-16</strong></p>
+    <p><span class="w3-tag">Adresa:</span>
+      <strong>Strada Belvedere, Nr. 10, Bl. 10, Scara A, Parter - Onești, Bacău</strong></p>
+    <p><span class="w3-tag">Telefon:</span>
+      <strong>0741 228 351</strong></p>
+      
+      <!-- ...........colorare text........... -->
+      <script>
+        var pl=document.getElementsByTagName("p");
+      // for(var i=0;i<pl.length;i++)
+      //   setTimeout(function(culoare,ob){ ob.style.color=culoare;},3000*(i+1),"red",pl[i]);
+      for(let i=0;i<pl.length;i++)
+        setTimeout(function()
+        {
+          colorare("#DC4C43",pl[i]);
+        },
+          2000*(i+1));
+      
+      function colorare(culoare,ob)
+      {
+       ob.style.color=culoare;
+      }
+      </script>
+
+     <!-- ..........................Photo&Video....................................... -->
+    <!-- <div>
+      <ul>
+        <li>
+        <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fcofetariaserelina%2Fvideos%2F2687390008006699%2F&show_text=0&width=269" 
+        width="269" height="476" 
+        style="border:none;overflow:hidden" float="left" scrolling="no" 
+        frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+      </li>
+      <img src="/Photos/photo1.jpg" alt="Poza Contact" class="center" style="width:50%">
+
+      </ul>
+    </div> -->
+
+    <!-- <div class="w3-row-padding"> -->
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-display-container">
+          <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fcofetariaserelina%2Fvideos%2F2687390008006699%2F&show_text=0&width=269" 
+          width="269" height="476" 
+          style="border:none;overflow:hidden" float="left" scrolling="no" 
+          frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+
+          <br> <br>
+          <button class="w3-button w3-black" id="b10" > <a href="/caddUsers.html">Comanda acum!</a></button> 
+
+        </div>
+      </div>
+    <!-- </div> -->
+    
+<!-- ..................................Formular.......................................... -->
+    
+    
+    <!-- <form action="confirmation.html" target="_blank">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Numele și Prenumele" required name="Nume"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Tipul Produsului" required name="Tipul Produsului"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" required name="date" value="2020-03-24T10:00"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Mesaj \ Comenzi Speciale" required name="Mesaj \ Comenzi Speciale"></p>
+      <p><button class="w3-button w3-black" type="submit">TRIMITE</button></p>
+    </form> -->
+
+
+
+<!-- 
+    <form name="contactForm" onsubmit="return validateForm()" action="confirmation.html" method="post">
+      <h3>Trimite o comanda!</h3>
+
+      
+      <div class="row">
+        <label>ID-ul Comenzii</label>
+        <input type="number" name="id" id='idInput'> </input>
+        <div class="error" id="idErr"></div>
+    </div>
+
+      <div class="row">
+          <label>Numele si Prenumele</label>
+          <input type="text" name="name" id='nameInput'></input>
+          <div class="error" id="nameErr"></div>
+      </div>
+
+
+      <div class="row">
+          <label>Adresa Email</label>
+          <input type="text" name="email" id='emailInput'></input>
+          <div class="error" id="emailErr"></div>
+      </div>
+
+
+      <div class="row">
+          <label>Telefon</label>
+          <input type="text" name="mobile" maxlength="10" id='mobileInput'></input>
+          <div class="error" id="mobileErr"></div>
+      </div>
+
+
+      <div class="row">
+          <label>Tipul Produsului</label>
+          <select name="tipulprod" id="tipulprodInput">
+              <option>Selectati</option>
+              <option>Torturi</option>
+              <option>Prajituri</option>
+              <option>Produse Speciale</option>
+              <option>Produse de Post</option>
+          </select> 
+          <input  type="text" placeholder="Descrierea produsului" name="descriereprod" id="descriereprodInput"></input>
+
+          <div class="error" id="tipulprodErr"></div>
+      </div>
+      
+      
+      <div class="row">
+          <label>Livrare</label>
+          <div class="form-inline">
+              <label><input type="radio" name="livrare" value="magaizn" id="magazinInput"> In magazin</input></label>
+              <label><input type="radio" name="livrare" value="domiciliu" id="domiciliuInput"> La domiciliu</input></label> 
+          </div>
+          <div class="error" id="livrareErr"></div>
+      </div>
+      
+      
+      <div class="row">
+        <label>Metoda de plata</label>
+        <div class="form-inline">
+          <label><input type="radio" name="plata" value="Cash" id="cashInput"> Cash</input></label>
+          <label><input type="radio" name="plata" value="Card" id="cardInput"> Card</input></label>
+         </div>
+        <div class="error" id="plataErr"></div>
+    </div>
+
+
+      <div class="row">
+                     
+          <p><button class="w3-button w3-black" type="submit" id="start" >TRIMITE</button></p>
+          
+      </div>
+
+
+  </form> -->                              <!-- <input type="submit" value="Submit"> --><!-- <input type="submit" class="w3-button w3-black" value="TRIMITE" > -->
+
+  
+  <img src="/Photos/photo1.jpg" alt="Poza Contact" class="center" style="width:50%; margin-right: 0;">
+
+  
+
+  <!-- <button class="w3-button w3-black" id="b10" > Comanda acum!</button>  -->
+
+  
+    <br><br><p>Spune-ti parerea:</p> <input id="comId" type="text"/>
+        <button  class="w3-button w3-black" id='logInButton' onclick="retineUser()">Afiseaza</button>
+        <p id="knownUser"></p>
+        <button class="w3-button w3-black" id='logOutButton' onclick="forgetUser()">Sterge</button>
+
+  <!-- </div> -->
+
+  <!-- style="width:15%;height:10%" -->
+  
+    <ul id="imagini"> 
+      <li >TorturiClasice.jpg</li>
+      <li >MiniTorturi.jpg</li>
+      <li> DeSezon.jpg</li>
+      <li >Personalizate.jpg</li>
+      <li >Speciale.jpg</li>
+    </ul>
+      <button class="w3-button w3-black" id="start">Vizioneaza!</button>
+
+      <!-- ...........colorare text........... -->
+      <script>
+        var pll=document.getElementsByTagName("li");
+      // for(var i=0;i<pl.length;i++)
+      //   setTimeout(function(culoare,ob){ ob.style.color=culoare;},3000*(i+1),"red",pl[i]);
+      for(let i=0;i<pll.length;i++)
+        setTimeout(function()
+        {
+          coloraree("#DC4C43",pll[i]);
+        },
+          2000*(i+1));
+      
+      function coloraree(culoaree,ob)
+      {
+       ob.style.color=culoaree;
+      }
+      </script>
+
+
+  </div>
+</div>
+
+
+
+
+
+
+<div class="w3-container"  >
+  <div class="w3-content" style="max-width:700px">
+
+
+
+            <!-- .......................STELUTA...................... -->
+            <div class="outerWrapper" id="outerWrapper">
+
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  x="0px" y="0px"
+                 width="100%" height="100%" viewBox="0 0 800 300" enable-background="new 0 0 800 300" xml:space="preserve" >
+                                  
+                <!-- <path d="M30,30 L770,30" />    -->
+                <path d="M29.833,113.5C29.833,178.667,99,271.334,257,271.334 S475.5,81,375.5,81S305,271.334,770,271.334"/>
+            
+                <!-- <polygon  points="15,0 18.541,11.459 30,11.459 20.729,18.541 24.271,30 15,22.918 5.729,30 9.271,18.541 0,11.459 11.459,11.459 "/>  -->
+                <polygon points="15,0 18.541,11.459 30,11.459 20.729,18.541 24.271,30 15,22.918 5.729,30 9.271,18.541 0,11.459 11.459,11.459 	"/>
+    
+              </svg>
+                        
+              <style>
+                .outerWrapper {
+                  width: 800px;
+                  height: 300px;
+                  position: relative;
+                }
+    
+                .outerWrapper svg {
+                  position: absolute;
+                }
+    
+                .outerWrapper svg path {
+                  fill:none; 
+                  stroke:#DABDD8;
+                  stroke-width:5; 
+                  stroke-dasharray:10,10;
+                }
+    
+                .outerWrapper svg polygon {
+                  fill:orange;               
+                }
+              </style>
+    
+              <script>
+                /*	A variable to keep track of where we are on the line
+                  0 = start, 1 = end */
+                var counter = 0;
+    
+                /*	A boolean variable to keep track of the direction we want to travel in 
+                  true = move to the left, false move to the right */
+                var direction = true;
+    
+                /*	First get a reference to the enclosing div and then to
+                  the 2 svg paths */
+                var svgContainer = document.getElementById("outerWrapper");
+                var ns = "http://www.w3.org/2000/svg";
+                var svg = svgContainer.getElementsByTagNameNS(ns, "path");
+                /*	the var 'svg' contains a reference to two paths so svg.length = 2
+                  svg[0] is the straight line and svg[1] is the curved lines */
+    
+                /*	Now get the length of those two paths */
+                // var straightLength = svg[0].getTotalLength();
+                var curveLength = svg[0].getTotalLength();
+    
+                /*	Also get a reference to the two star polygons */
+                var stars = svgContainer.getElementsByTagName("polygon");
+    
+                function moveStar() {
+                  /*	Check to see where the stars are journeys to determine 
+                    what direction they should be travelling in */
+                  if (parseInt(counter,10) === 1) {
+                    /* we've hit the end! */
+                    direction = false;
+                  } else if (parseInt(counter,10) < 0) {
+                    /* we're back at the start! */
+                    direction = true;
+                  }
+    
+                  /*	Based on the direction variable either increase or decrease the counter */
+                  if (direction) {
+                    counter += 0.003;
+                  } else {
+                    counter -= 0.003;
+                  }
+    
+                  /*	Now the magic part. We are able to call .getPointAtLength on the tow paths to return 
+                    the coordinates at any point along their lengths. We then simply set the stars to be positioned 
+                    at these coordinates, incrementing along the lengths of the paths */
+                  // stars[0].setAttribute("transform","translate("+ (svg[0].getPointAtLength(counter * straightLength).x -15)  + "," + (svg[0].getPointAtLength(counter * straightLength).y -15) + ")");
+                  stars[0].setAttribute("transform","translate("+ (svg[0].getPointAtLength(counter * curveLength).x -15)  + "," + (svg[0].getPointAtLength(counter * curveLength).y -15) + ")");
+    
+                  /*	Use requestAnimationFrame to recursively call moveStar() 60 times a second
+                    to create the illusion of movement */
+                  requestAnimationFrame(moveStar);
+                }
+                requestAnimationFrame(moveStar);
+              </script>
+          </div> 
+
+
+
+
+
+
+    <!-- <button class="w3-button w3-black" id="b10" > <a href="/caddUsers.html">Comanda acum!</a></button>  -->
+      <button class="w3-button w3-black" id="b2"> <a href="/Torturi-Prajituri.html">Torturi si Prajituri</a></button>
+      <!-- <button class="w3-button w3-black" id="b3" >Inapoi <- </button>  -->
+      <!-- <button class="w3-button w3-black" id="b4"> Inainte -> </button>  -->
+   
+      <button class="w3-button w3-black" onclick="goBack()">Inapoi <-</button>
+      <button class="w3-button w3-black" onclick="goFront()">Inainte -></button>
+
+      <script>
+        function goBack() {
+          window.history.go(-1);
+        }
+        function goFront() {
+          window.history.go(1);
+        }
+      </script>
+
+  </div>
+</div>
+
+<!-- <div class="w3-container"  >
+  <div class="w3-content" style="max-width:700px">
+
+    <br>   
+    <div class="row">
+        <p><strong><h4>Pentru a acceseaza o anumita comanda online:</h4></strong></p>
+    </div>
+
+    <div class="row">
+        <button class="w3-button w3-black" id="b30"> <a href="/cuserPage.html">Click aici</a> </button>
+    </div>
+
+
+    <br>   
+    <div class="row">
+        <p><strong><h4>Pentru a acceseaza o toate comenzile online:</h4></strong></p>
+    </div>
+
+    <div class="row">
+      <button class="w3-button w3-black" id="b20"> <a href="/ccomanda.html">Click aici</a> </button>
+    </div>
+
+  </div>
+</div> -->
+
+
+
+<!-- .........................Footer ............................-->
+
+
+<!-- Varianta 1  -->
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+  <img alt="logo"  style="width:15%;height:10%" src="/Photos/icon.png"/>
+  <h3>- Cofetăria☆Serelina -</h3>
+  <h5>Vă așteptăm!</h5>
+  <p>
+    <a href="https://www.facebook.com/cofetariaserelina/" class="fa fa-facebook"></a>
+    <a href="https://www.instagram.com/cofetariaserelina/" class="fa fa-instagram"></a>
+  </p>
+  <br> 
+  <a href="/" class="w3-button w3-black"><i class="fa fa-arrow-up w3-margin-right"></i>Acasa</a>
+</footer>
+
+
+<!-- ............................................................................ -->
+
+
+</body>
+
+</html>

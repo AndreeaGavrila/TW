@@ -1,0 +1,1464 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+
+
+<head>
+
+    <title>Torturi-Prajituri</title>
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="stylesheet" type="text/css" href="/w3.css" />
+
+    <link rel="shortcut icon" type="image/png" href="/Photos/Icon.png ">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="/j2.js"></script>
+    <script src="/java.js"></script>
+    <script src="active-menu-link.js"></script>
+
+    <style>
+      .content{
+        padding: 50px 80px !important; 
+      }
+    </style>
+
+
+</head>
+
+
+
+<body>
+
+<div id="header">
+  <img  alt="Coperta" style="width:60%;height:60%" src="/Photos/cover.jpg"/>
+</div> 
+
+
+
+    <!-- <nav class="nav-sticky"  id="nav"> -->
+      <nav class="nav-main " id="nav" >
+
+        <ul class="main-nav" id="js-menu" style="margin-left: 1.5em; float:left;">
+
+
+      <li style="float: left;"> <button class="w3-button w3-black" id="b10"  > <a href="/caddUsers.html">Comanda acum!</a></button> </li>
+
+       <!-- ...................Ceasul................... -->
+         <li style="float: right;">
+          <p id="demo" style="color: rgb(220, 76, 67);"></p>
+         </li> 
+
+          <script>
+          var myVar = setInterval(myTimer, 1000);
+
+          function myTimer() {
+            var d = new Date();
+            document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+          }
+          </script>
+          
+        <!-- <li><a href="/" class=" w3-block ">Acasa</a></li> -->
+        <li class="active"   style="float: right;" ><a href="/index.html" class=" w3-block ">Acasa</a></li>
+
+
+        <li   class="dropdown" style="float: right;">
+            <a href="#Torturi" class="dropbtn">Torturi</a>
+            <div class="dropdown-content">
+                <a href="#Clasice">Clasice</a>
+                <a href="#MiniTorturi">Mini Torturi</a>
+                <a href="#DeSezon">De sezon</a>
+                <a href="#Personalizate">Personalizate</a>
+                <a href="#Speciale">Speciale</a>
+                <a href="#Post">Post</a>
+            </div>
+        </li>
+
+        <li   class="dropdown" style="float: right;">
+            <a href="#Prajituri" class="dropbtn">Prajituri</a>
+            <div class="dropdown-content">
+              <a href="#PrajituriMari">Prajituri Mari</a>
+              <a href="#MiniPrajituri">Mini Prajituri</a>
+              <a href="#PrajituriSpeciale">Prajituri Speciale</a>
+              <a href="#Fursecuri">Fursecuri</a>
+              <a href="#Platouri">Platouri</a>
+
+            </div>
+        </li>
+
+        <li ><a href="/index.html#Contact" class="nav-links" >Contact</a></li>
+
+
+         <!-- <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">De Post</a>
+            <div class="dropdown-content">
+                <a href="#TorturiPost">Torturi de Post</a>
+                <a href="#PrajituriPost">Prajituri de Post</a>   
+            </div>
+        </li> -->
+
+        <!-- <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Specialitatile lunii</a>
+            <div class="dropdown-content">
+              <a href="#Martie">Martie</a>
+              <a href="#ZiuaIndragostitilor">Ziua Indragostitilor</a>
+              <a href="#Craciun">Craciun</a>
+            </div>
+        </li> -->
+
+    </ul>
+
+    </nav>
+
+
+    
+    <!-- <br>
+      <button class="w3-button w3-black" id="b5"> History -> </button> 
+      <button class="w3-button w3-black" id="b6"">History <- </button> 
+     -->
+
+     
+    <br>
+    <div>
+      <button class="w3-button w3-black" onclick="goBack()">Inapoi <-</button>
+      <button class="w3-button w3-black" onclick="goFront()">Inainte -></button>  
+    </div>
+     <script>
+        function goBack() {
+          window.history.go(-1);
+        }
+        function goFront() {
+          window.history.go(1);
+        }
+    </script>
+
+
+    <!-- ...........................TITLU................................. -->
+
+  <div class="w3-container" >
+    <div class="w3-content" style="max-width:700px"> 
+  
+    <h2 class="ml5">
+    <span class="text-wrapper">
+      <span class="line line1"></span>
+      <span class="letters letters-left">- Cofetăria</span>
+      <span class="letters ampersand">☆</span>
+      <span class="letters letters-right">Serelina -</span>
+      <span class="line line2"></span>
+    </span>
+    </h2>
+    </div>
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+  <script>
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml5 .line',
+    opacity: [0.5,1],
+    scaleX: [0, 1],
+    easing: "easeInOutExpo",
+    duration: 700
+  }).add({
+    targets: '.ml5 .line',
+    duration: 600,
+    easing: "easeOutExpo",
+    translateY: (el, i) => (-0.625 + 0.625*2*i) + "em"
+  }).add({
+    targets: '.ml5 .ampersand',
+    opacity: [0,1],
+    scaleY: [0.5, 1],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=600'
+  }).add({
+    targets: '.ml5 .letters-left',
+    opacity: [0,1],
+    translateX: ["0.5em", 0],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=300'
+  }).add({
+    targets: '.ml5 .letters-right',
+    opacity: [0,1],
+    translateX: ["-0.5em", 0],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=600'
+  }).add({
+    targets: '.ml5',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+  
+
+
+  </script>
+
+                  
+      <!-- ..........Dark Mode................ -->
+      <div>
+        <input type="checkbox" id="checkboxTheme" class="cm-toggle"/>
+      <em>Incearca modul Dark!</em>
+      </div>
+  
+      </div>
+    </div>
+     
+
+    <br>
+
+     <div class="w3-container"  >
+      <div class="w3-content" style="max-width:700px">
+
+        
+
+        <!-- <div>
+          <div id="center">
+          </div>
+  
+          <div id="point"></div>
+
+          <script>
+            x = 100  // center
+            y = 50   // center
+            r = 50   // radius
+            a = 0    // angle (from 0 to Math.PI * 2)
+  
+            function rotate(a) {
+              
+              var px = x + r * Math.cos(a); // <-- that's the maths you need
+              var py = y + r * Math.sin(a);
+              
+              document.querySelector('#point').style.left = px + "px";
+              document.querySelector('#point').style.top = py + "px";  
+            }
+  
+  
+            setInterval(function() {
+              a = (a + Math.PI / 360) % (Math.PI * 2);
+              rotate(a);
+            }, 5);
+          </script>
+         
+         <style> 
+         
+          #center {
+          left: 25%;
+          top: 65%;
+          background: black;
+  
+          position: fixed;
+          width: 10px;
+          height: 10px;
+        }
+  
+        #point {
+          left: 25%;
+          top: 65%;
+          background: magenta;
+  
+          position: fixed;
+          width: 10px;
+          height: 10px;
+        }
+          </style>
+
+        </div> -->
+       
+
+      
+
+        <button class="w3-button w3-black" id="b10" > <a href="/caddUsers.html">Comanda acum!</a></button> 
+        
+  
+        
+
+         <!-- .......Aparitie treptata Detalii Happy Hours ...... -->
+  
+        <button  class="w3-button w3-pink"  onclick="typeWriter1()"> Happy Hours! </button>
+
+        <p id="text1"></p>
+
+        <script>
+        var i = 0;
+        var txt1 = ' -------------> ( zilnic intre 10:00-11:30 sau 17:00-17:50 )';
+        var speed = 60;
+
+        function typeWriter1() {
+          if (i < txt1.length) {
+            document.getElementById("text1").innerHTML += txt1.charAt(i);
+            i++;
+            setTimeout(typeWriter1, speed);
+            clearTimeout(typeWriter1);
+          }
+        }
+        </script>
+  
+  <!-- .........Happy Hours ........  -->
+
+        <p id="HH"> </p>
+
+        <script>
+
+          function test(){
+            var date=new Date();  
+            var start=new Date(date.getFullYear(), date.getMonth(), date.getDate(), 10,0,0,0);
+            var final=new Date(date.getFullYear(), date.getMonth(), date.getDate(), 11,30,0,0,0);
+        
+        
+             if( start.getTime() <= date.getTime()  &&  date.getTime()  <=  final.getTime())
+              //intre 10:00 si 11:30
+            { 
+              // document.write('Happy hours! Avem oferte de dimineata! ');
+              document.getElementById("HH").innerHTML = 'Happy hours! Avem oferte de dimineata! '
+               + '<br />' + '( zilnic intre 10:00-11:30 )';
+              clearInterval();
+            }
+        
+            else if(date.getHours()  == 17 && date.getMinutes()  <= 50)
+            { // intre 17:00 si 17:50
+            
+                // document.write('Happy hours! Avem ultimele promotii! ');
+                document.getElementById("HH").innerHTML = 'Happy hours! Avem ultimele promotii!' 
+                + '<br />' + '( zilnic intre 17:00-17:50 )';
+                clearInterval();
+            }
+            else
+            {
+              // document.write('Oops, incearca sa prinzi maine noile oferte! :) ');
+              document.getElementById("HH").innerHTML = 'Oops, incearca sa prinzi maine noile oferte Happy Hours :)';
+              clearInterval();
+            }
+        
+            }
+            test();
+          
+        </script>  
+
+
+<!-- .......colorare text din p.... -->
+<script>
+  var pl4=document.getElementsByTagName("p");
+  for(let i=0;i<pl4.length;i++)
+  setTimeout(function()
+  {
+    colorare4("#DC4C43",pl4[i]);
+  }, 700*(i+1));
+
+function colorare4(culoare4,ob)
+{
+ ob.style.color=culoare4;
+}
+</script>
+
+<br>
+  
+
+
+
+<!-- .................Cuprins................. -->
+<div class="w3-container" >
+  <div class="w3-content" style="max-width:700px"> 
+    <h5 class="w3-center " style="padding-top: 64px!important;padding-bottom:0;"><span class="w3-tag w3-wide">Cuprins</span></h5>
+
+
+
+    <ul class="parent"   style="margin-left: 1.5em; float:left; line-height:2.5; font-size: 17px; list-style-type: none; overflow: hidden; ">
+
+
+       <li class="child" style="float: left;" >
+        <a href="/index.html" class=" nav-links " style="display: block; text-align: center; padding: 20px; text-decoration: none;">Acasa</a></li>
+
+
+       <li class="child dropdown" style="float: left;" >
+           <a href="#Torturi" class="nav-links " style="display: block; text-align: center; padding: 20px; text-decoration: none;">Torturi</a>
+           <div class=" dropdown-content" >
+               <div class="child2"> <a  class="child" href="#Clasice">Clasice</a> </div>
+               <div class="child2"> <a  class="child" href="#MiniTorturi">Mini Torturi</a> </div>
+               <div class="child2"> <a  class="child" href="#DeSezon">De sezon</a> </div>
+               <div class="child2"> <a  class="child" href="#Personalizate">Personalizate</a> </div>
+               <div class="child2"> <a  class="child" href="#Speciale">Speciale</a> </div>
+               <div class="child2"> <a  class="child" href="#Post">Post</a> </div>
+           </div>
+       </li>
+
+
+       <li class="child dropdown" style="float: left;" > 
+         <a href="#Prajituri" class=" nav-links " style="display: block; text-align: center; padding: 20px; text-decoration: none;">Prajituri</a>
+           <div class="dropdown-content">
+             <a  class="child" href="#PrajituriMari">Prajituri Mari</a>
+             <a  class="child" href="#MiniPrajituri">Mini Prajituri</a>
+             <a  class="child" href="#PrajituriSpeciale">Prajituri Speciale</a>
+             <a  class="child" href="#Fursecuri">Fursecuri</a>
+             <a  class="child" href="#Platouri">Platouri</a>
+
+           </div>
+       </li>
+
+
+       <li class="child" style="float: left;">
+         <a href="/index.html#Contact" class="nav-links" style="display: block; text-align: center; padding: 20px; text-decoration: none;" >Contact</a></li>
+ 
+
+        </ul>
+        
+        <!-- colorare items din cuprins la cateva sec -->
+        <script>
+          var pl3=document.getElementsByTagName("li");
+          for(let i=0;i<pl3.length;i++)
+          setTimeout(function()
+          {
+            colorare3("#DC4C43",pl3[i]);
+          }, 700*(i+1));
+        
+        function colorare3(culoare3,ob)
+        {
+         ob.style.color=culoare3;
+        }
+        </script>
+
+
+
+     <!-- evidentiere item din cuprins -->
+     <style>
+      .parent{ overflow: hidden; }
+      .child{ cursor: pointer;background-color:#ddd;}
+              
+      .bak{ background-color: #eecaac;; color: #fff; font-weight:bold; }
+   
+   </style>
+  
+    <script>
+      var elements = document.getElementsByClassName("child");
+      for(var i=0; i<elements.length; i++ )
+      {
+        elements[i].onclick = function(){
+          
+          //remove class from sibling
+          var el = elements[0];
+          while(el)
+          {
+            if(el.tagName === "LI" ){
+                //remove class
+                el.classList.remove("bak");
+            }
+  
+            if(el.tagName === "DIV" ){
+               //remove class
+               el.classList.remove("bak");
+            }
+  
+            //pass to the new sibling
+            el = el.nextSibling;
+          }
+  
+            this.classList.add("bak");
+        };
+      }
+  
+    </script>
+    
+
+  </div>
+</div>
+
+  
+    <article>
+    <div class="content"> 
+
+      <div class="blocks">
+
+
+        <!-- <h2 id="Torturi">Torturi</h2> -->
+
+        <div class="block" id="Torturi"><h2 id="Torturi">Torturi</h2></div>
+
+      
+        
+        <!-- .......Aparitie treptata Detalii...... -->
+
+        <button  class="w3-button w3-grey"  onclick="typeWriter2()"> Detalii </button>
+
+        <p id="text2"></p>
+
+        <script>
+        var j = 0;
+        var txt2 = 'Puteti alege urmatoarele modele sau personalizate la comanda! :) ';
+        var speed = 60;
+
+        function typeWriter2() {
+          if (j < txt2.length) {
+            document.getElementById("text2").innerHTML += txt2.charAt(j);
+            j++;
+            setTimeout(typeWriter2, speed);
+            clearTimeout(typeWriter2);
+          }
+        }
+        </script>
+
+
+
+
+            <h1 id="Clasice">Clasice</h1>
+
+            <div class="container">
+                <!-- Full-width images with number text -->
+                <div class="mySlides">
+                  <div class="numbertext">1 / 6</div>
+                    <img src="/Photos/TorturiClasice1.jpg" style="width:100%;max-width: 300px" alt="Tort">
+                </div>
+                <div class="mySlides">
+                  <div class="numbertext">2 / 6</div>
+                    <img src="/Photos/TorturiClasice2.jpg" style="width:100%;max-width: 300px" alt="Tort">
+                </div>              
+                <div class="mySlides">
+                  <div class="numbertext">3 / 6</div>
+                    <img src="/Photos/TorturiClasice3.jpg"  style="width:100%;max-width: 300px" alt="Tort">
+                </div>            
+                <div class="mySlides">
+                  <div class="numbertext">4 / 6</div>
+                    <img src="/Photos/TorturiClasice4.jpg"  style="width:100%;max-width: 300px" alt="Tort">
+                </div>             
+                <div class="mySlides">
+                  <div class="numbertext">5 / 6</div>
+                    <img src="/Photos/TorturiClasice5.jpg" style="width:100%;max-width: 300px" alt="Tort">
+                </div>              
+                <div class="mySlides">
+                  <div class="numbertext">6 / 6</div>
+                    <img src="/Photos/TorturiClasice6.jpg" style="width:100%;max-width: 300px" alt="Tort">
+                </div>
+
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              
+                <!-- Thumbnail images -->
+                <div class="row">
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/TorturiClasice1.jpg" style="width:100%;max-width: 100px" alt="Tort" onclick="currentSlide(1)" >
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/TorturiClasice2.jpg" style="width:100%;max-width: 100px" alt="Tort" onclick="currentSlide(2)">
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/TorturiClasice3.jpg" style="width:100%;max-width: 100px" alt="Tort"  onclick="currentSlide(3)">
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/TorturiClasice4.jpg" style="width:100%;max-width: 100px" alt="Tort" onclick="currentSlide(4)" >
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/TorturiClasice5.jpg" style="width:100%;max-width: 100px" alt="Tort" onclick="currentSlide(5)" >
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/TorturiClasice6.jpg" style="width:100%;max-width: 100px" alt="Tort" onclick="currentSlide(6)">
+                  </div>
+                </div>
+              </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <h1 id="MiniTorturi">Mini Torturi</h1>
+           
+            <div class="container">
+                <!-- Full-width images with number text -->
+                <div class="mySlides">
+                  <div class="numbertext">1 / 6</div>
+                    <img src="/Photos/MiniTorturi1.jpg" style="width:100%;max-width:300px" alt="Tort">
+                </div>
+                <div class="mySlides">
+                  <div class="numbertext">2 / 6</div>
+                    <img src="/Photos/MiniTorturi2.jpg" style="width:100%;max-width:300px" alt="Tort">
+                </div>              
+                <div class="mySlides">
+                  <div class="numbertext">3 / 6</div>
+                    <img src="/Photos/MiniTorturi3.jpg" style="width:100%;max-width:300px" alt="Tort">
+                </div>            
+                <div class="mySlides">
+                  <div class="numbertext">4 / 6</div>
+                    <img src="/Photos/MiniTorturi4.jpg"  style="width:100%;max-width:300px" alt="Tort">
+                </div>             
+                <div class="mySlides">
+                  <div class="numbertext">5 / 6</div>
+                    <img src="/Photos/MiniTorturi5.jpg"  style="width:100%;max-width:300px" alt="Tort">
+                </div>              
+                <div class="mySlides">
+                  <div class="numbertext">6 / 6</div>
+                    <img src="/Photos/MiniTorturi6.jpg"  style="width:100%;max-width:300px" alt="Tort">
+                </div>
+
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              
+                <!-- Thumbnail images -->
+                <div class="row">
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/MiniTorturi1.jpg" style="width:100%;max-width:100px" alt="Tort" onclick="currentSlide(7)">
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/MiniTorturi2.jpg" style="width:100%;max-width:100px" alt="Tort" onclick="currentSlide(8)" >
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/MiniTorturi3.jpg" style="width:100%;max-width:100px" alt="Tort"  onclick="currentSlide(9)" >
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/MiniTorturi4.jpg" style="width:100%;max-width:100px" alt="Tort" onclick="currentSlide(10)" >
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/MiniTorturi5.jpg" style="width:100%;max-width:100px" alt="Tort" onclick="currentSlide(11)" >
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/MiniTorturi6.jpg" style="width:100%;max-width:100px" alt="Tort" onclick="currentSlide(12)" >
+                  </div>
+                </div>
+              </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <h1 id="DeSezon">De Sezon</h1>
+           
+            <div class="container">
+                <!-- Full-width images with number text -->
+                <div class="mySlides">
+                  <div class="numbertext">1 / 6</div>
+                    <img src="/Photos/DeSezon1.jpg" style="width:100%;max-width:300px" alt="Tort">
+                </div>
+                <div class="mySlides">
+                  <div class="numbertext">2 / 6</div>
+                    <img src="/Photos/DeSezon2.jpg" style="width:100%;max-width:300px" alt="Tort">
+                </div>              
+                <div class="mySlides">
+                  <div class="numbertext">3 / 6</div>
+                    <img src="/Photos/DeSezon3.jpg"  style="width:100%;max-width:300px" alt="Tort">
+                </div>            
+                <div class="mySlides">
+                  <div class="numbertext">4 / 6</div>
+                    <img src="/Photos/DeSezon4.jpg"  style="width:100%;max-width:300px" alt="Tort">
+                </div>             
+                <div class="mySlides">
+                  <div class="numbertext">5 / 6</div>
+                    <img src="/Photos/DeSezon5.jpg" style="width:100%;max-width:300px" alt="Tort">
+                </div>              
+                <div class="mySlides">
+                  <div class="numbertext">6 / 6</div>
+                    <img src="/Photos/DeSezon6.jpg"  style="width:100%;max-width:300px" alt="Tort">
+                </div>
+
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              
+                <!-- Thumbnail images -->
+                <div class="row">
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/DeSezon1.jpg" style="width:100%;max-width:100px" alt="Tort" onclick="currentSlide(13)" >
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/DeSezon2.jpg" style="width:100%;max-width:100px" alt="Tort" onclick="currentSlide(14)" >
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/DeSezon3.jpg" style="width:100%;max-width:100px" alt="Tort"  onclick="currentSlide(15)" >
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/DeSezon4.jpg" style="width:100%;max-width:100px" alt="Tort" onclick="currentSlide(16)" >
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/DeSezon5.jpg" style="width:100%;max-width:100px" alt="Tort" onclick="currentSlide(17)" >
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/DeSezon6.jpg" style="width:100%;max-width:100px" alt="Tort" onclick="currentSlide(18)" >
+                  </div>
+                </div>
+              </div>
+            
+   
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <h1 id="Personalizate">Personalizate</h1>
+ 
+            <div class="container">
+                <!-- Full-width images with number text -->
+                <div class="mySlides">
+                  <div class="numbertext">1 / 6</div>
+                    <img src="/Photos/Personalizate1.jpg" style="width:100%;max-width:300px" alt="Tort">
+                </div>
+                <div class="mySlides">
+                  <div class="numbertext">2 / 6</div>
+                    <img src="/Photos/Personalizate2.jpg" style="width:100%;max-width:300px" alt="Tort">
+                </div>              
+                <div class="mySlides">
+                  <div class="numbertext">3 / 6</div>
+                    <img src="/Photos/Personalizate3.jpg" style="width:100%;max-width:300px" alt="Tort">
+                </div>            
+                <div class="mySlides">
+                  <div class="numbertext">4 / 6</div>
+                    <img src="/Photos/Personalizate4.jpg" style="width:100%;max-width:300px" alt="Tort">
+                </div>             
+                <div class="mySlides">
+                  <div class="numbertext">5 / 6</div>
+                    <img src="/Photos/Personalizate5.jpg" style="width:100%;max-width:300px" alt="Tort">
+                </div>              
+                <div class="mySlides">
+                  <div class="numbertext">6 / 6</div>
+                    <img src="/Photos/Personalizate6.jpg" style="width:100%;max-width:300px" alt="Tort">
+                </div>
+
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              
+                <!-- Thumbnail images -->
+                <div class="row">
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/Personalizate1.jpg" style="width:100%;max-width:100px" alt="Tort" onclick="currentSlide(19)" >
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/Personalizate2.jpg" style="width:100%;max-width:100px" alt="Tort" onclick="currentSlide(20)" >
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/Personalizate3.jpg" style="width:100%;max-width:100px" alt="Tort"  onclick="currentSlide(21)" >
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/Personalizate4.jpg" style="width:100%;max-width:100px" alt="Tort" onclick="currentSlide(22)" >
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/Personalizate5.jpg" style="width:100%;max-width:100px" alt="Tort" onclick="currentSlide(23)" >
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/Personalizate6.jpg" style="width:100%;max-width:100px" alt="Tort" onclick="currentSlide(24)" >
+                  </div>
+                </div>
+              </div>
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <h1 id="Speciale">Speciale</h1>
+           
+            <div class="container">
+                <!-- Full-width images with number text -->
+                <div class="mySlides">
+                  <div class="numbertext">1 / 6</div>
+                    <img src="/Photos/Speciale1.jpg" style="width:100%;max-width:300px" alt="Tort">
+                </div>
+                <div class="mySlides">
+                  <div class="numbertext">2 / 6</div>
+                    <img src="/Photos/Speciale2.jpg" style="width:100%;max-width:300px" alt="Tort">
+                </div>              
+                <div class="mySlides">
+                  <div class="numbertext">3 / 6</div>
+                  <img src="/Photos/Speciale3.jpg" style="width:100%;max-width:300px" alt="Tort">
+                </div>            
+                <div class="mySlides">
+                  <div class="numbertext">4 / 6</div>
+                  <img src="/Photos/Speciale4.jpg" style="width:100%;max-width:300px" alt="Tort">
+                </div>             
+                <div class="mySlides">
+                  <div class="numbertext">5 / 6</div>
+                  <img src="/Photos/Speciale5.jpg" style="width:100%;max-width:300px" alt="Tort">
+                </div>              
+                <div class="mySlides">
+                  <div class="numbertext">6 / 6</div>
+                  <img src="/Photos/Speciale6.jpg" style="width:100%;max-width:300px" alt="Tort">
+                </div>
+
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              
+                <!-- Thumbnail images -->
+                <div class="row">
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/Speciale1.jpg" style="width:100%;max-width:100px" alt="Tort" onclick="currentSlide(25)" >
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/Speciale2.jpg" style="width:100%;max-width:100px" alt="Tort" onclick="currentSlide(26)" >
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/Speciale3.jpg" style="width:100%;max-width:100px" alt="Tort" onclick="currentSlide(27)" >
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/Speciale4.jpg" style="width:100%;max-width:100px" alt="Tort" onclick="currentSlide(28)" >
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/Speciale5.jpg" style="width:100%;max-width:100px" alt="Tort" onclick="currentSlide(29)" >
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/Speciale6.jpg" style="width:100%;max-width:100px" alt="Tort" onclick="currentSlide(30)" >
+                  </div>
+                </div>
+              </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              <h1 id="Post">Post</h1>
+           
+            <div class="container">
+                <!-- Full-width images with number text -->
+                <div class="mySlides">
+                  <div class="numbertext">1 / 6</div>
+                    <img src="/Photos/TorturiPost1.jpg" style="width:100%;max-width:300px" alt="Tort">
+                </div>
+                <div class="mySlides">
+                  <div class="numbertext">2 / 6</div>
+                    <img src="/Photos/TorturiPost2.jpg" style="width:100%;max-width:300px" alt="Tort">
+                </div>              
+                <div class="mySlides">
+                  <div class="numbertext">3 / 6</div>
+                  <img src="/Photos/TorturiPost3.jpg" style="width:100%;max-width:300px" alt="Tort">
+                </div>            
+                <div class="mySlides">
+                  <div class="numbertext">4 / 6</div>
+                  <img src="/Photos/TorturiPost4.jpg" style="width:100%;max-width:300px" alt="Tort">
+                </div>             
+                <div class="mySlides">
+                  <div class="numbertext">5 / 6</div>
+                  <img src="/Photos/TorturiPost5.jpg" style="width:100%;max-width:300px" alt="Tort">
+                </div>              
+                <div class="mySlides">
+                  <div class="numbertext">6 / 6</div>
+                  <img src="/Photos/TorturiPost6.jpg" style="width:100%;max-width:300px" alt="Tort">
+                </div>
+
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              
+                <!-- Thumbnail images -->
+                <div class="row">
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/TorturiPost1.jpg" style="width:100%;max-width:100px" alt="Tort" onclick="currentSlide(31)" >
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/TorturiPost2.jpg" style="width:100%;max-width:100px" alt="Tort" onclick="currentSlide(32)" >
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/TorturiPost3.jpg" style="width:100%;max-width:100px" alt="Tort"  onclick="currentSlide(33)" >
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/TorturiPost4.jpg" style="width:100%;max-width:100px" alt="Tort" onclick="currentSlide(34)" >
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/TorturiPost5.jpg" style="width:100%;max-width:100px" alt="Tort" onclick="currentSlide(35)" >
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/TorturiPost6.jpg" style="width:100%;max-width:100px" alt="Tort" onclick="currentSlide(36)" >
+                  </div>
+                </div>
+              </div>
+
+
+
+
+
+
+
+            <!-- .......................STELUTA...................... -->
+            <div class="outerWrapper" id="outerWrapper">
+
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  x="0px" y="0px"
+                   width="100%" height="100%" viewBox="0 0 800 300" enable-background="new 0 0 800 300" xml:space="preserve" >
+                                    
+                  <!-- <path d="M30,30 L770,30" />    -->
+                  <path d="M29.833,113.5C29.833,178.667,99,271.334,257,271.334 S475.5,81,375.5,81S305,271.334,770,271.334"/>
+              
+                  <!-- <polygon  points="15,0 18.541,11.459 30,11.459 20.729,18.541 24.271,30 15,22.918 5.729,30 9.271,18.541 0,11.459 11.459,11.459 "/>  -->
+                  <polygon points="15,0 18.541,11.459 30,11.459 20.729,18.541 24.271,30 15,22.918 5.729,30 9.271,18.541 0,11.459 11.459,11.459 	"/>
+      
+                </svg>
+                          
+                <style>
+                  .outerWrapper {
+                    width: 800px;
+                    height: 300px;
+                    position: relative;
+                  }
+      
+                  .outerWrapper svg {
+                    position: absolute;
+                  }
+      
+                  .outerWrapper svg path {
+                    fill:none; 
+                    stroke:#DABDD8;
+                    stroke-width:5; 
+                    stroke-dasharray:10,10;
+                  }
+      
+                  .outerWrapper svg polygon {
+                    fill:orange;               
+                  }
+                </style>
+      
+                <script>
+                  /*	A variable to keep track of where we are on the line
+                    0 = start, 1 = end */
+                  var counter = 0;
+      
+                  /*	A boolean variable to keep track of the direction we want to travel in 
+                    true = move to the left, false move to the right */
+                  var direction = true;
+      
+                  /*	First get a reference to the enclosing div and then to
+                    the 2 svg paths */
+                  var svgContainer = document.getElementById("outerWrapper");
+                  var ns = "http://www.w3.org/2000/svg";
+                  var svg = svgContainer.getElementsByTagNameNS(ns, "path");
+                  /*	the var 'svg' contains a reference to two paths so svg.length = 2
+                    svg[0] is the straight line and svg[1] is the curved lines */
+      
+                  /*	Now get the length of those two paths */
+                  // var straightLength = svg[0].getTotalLength();
+                  var curveLength = svg[0].getTotalLength();
+      
+                  /*	Also get a reference to the two star polygons */
+                  var stars = svgContainer.getElementsByTagName("polygon");
+      
+                  function moveStar() {
+                    /*	Check to see where the stars are journeys to determine 
+                      what direction they should be travelling in */
+                    if (parseInt(counter,10) === 1) {
+                      /* we've hit the end! */
+                      direction = false;
+                    } else if (parseInt(counter,10) < 0) {
+                      /* we're back at the start! */
+                      direction = true;
+                    }
+      
+                    /*	Based on the direction variable either increase or decrease the counter */
+                    if (direction) {
+                      counter += 0.003;
+                    } else {
+                      counter -= 0.003;
+                    }
+      
+                    /*	Now the magic part. We are able to call .getPointAtLength on the tow paths to return 
+                      the coordinates at any point along their lengths. We then simply set the stars to be positioned 
+                      at these coordinates, incrementing along the lengths of the paths */
+                    // stars[0].setAttribute("transform","translate("+ (svg[0].getPointAtLength(counter * straightLength).x -15)  + "," + (svg[0].getPointAtLength(counter * straightLength).y -15) + ")");
+                    stars[0].setAttribute("transform","translate("+ (svg[0].getPointAtLength(counter * curveLength).x -15)  + "," + (svg[0].getPointAtLength(counter * curveLength).y -15) + ")");
+      
+                    /*	Use requestAnimationFrame to recursively call moveStar() 60 times a second
+                      to create the illusion of movement */
+                    requestAnimationFrame(moveStar);
+                  }
+                  requestAnimationFrame(moveStar);
+                </script>
+            </div> 
+
+
+
+
+
+
+
+              <br>
+              <br>
+
+            <!-- <h2 id="Prajituri">Prajituri</h2> -->
+
+            <div class="block" id="Prajituri"><h2 id="Prajituri">Prajituri</h2></div>
+
+            
+
+          <!-- .......Aparitie treptata Detalii...... -->
+
+          <button  class="w3-button w3-grey"  onclick="typeWriter3()"> Detalii </button>
+
+          <p id="text3"></p>
+
+          <script>
+          var k = 0;
+          var txt3 = 'Puteti alege din urmatoarele sortimente! :) ';
+          var speed = 60;
+
+          function typeWriter3() {
+            if (k < txt3.length) {
+              document.getElementById("text3").innerHTML += txt3.charAt(k);
+              k++;
+              setTimeout(typeWriter3, speed);
+              clearTimeout(typeWriter3);
+            }
+          }
+          </script>
+
+
+
+
+
+            <h1 id="PrajituriMari">Prajituri Mari</h1>
+            <div class="container">
+                <!-- Full-width images with number text -->
+                <div class="mySlides">
+                  <div class="numbertext">1 / 6</div>
+                    <img src="/Photos/PrajituriMari1.jpg" style="width:100%;max-width:300px" alt="Prajituri">
+                </div>
+                <div class="mySlides">
+                  <div class="numbertext">2 / 6</div>
+                    <img src="/Photos/PrajituriMari2.jpg" style="width:100%;max-width:300px" alt="Prajituri">
+                </div>              
+                <div class="mySlides">
+                  <div class="numbertext">3 / 6</div>
+                    <img src="/Photos/PrajituriMari3.jpg"  style="width:100%;max-width:300px" alt="Prajituri">
+                </div>            
+                <div class="mySlides">
+                  <div class="numbertext">4 / 6</div>
+                    <img src="/Photos/PrajituriMari4.jpg" style="width:100%;max-width:300px" alt="Prajituri">
+                </div>             
+                <div class="mySlides">
+                  <div class="numbertext">5 / 6</div>
+                    <img src="/Photos/PrajituriMari5.jpg"  style="width:100%;max-width:300px" alt="Prajituri">
+                </div>              
+                <div class="mySlides">
+                  <div class="numbertext">6 / 6</div>
+                    <img src="/Photos/PrajituriMari6.jpg" style="width:100%;max-width:300px" alt="Prajituri">
+                </div>
+
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              
+                <!-- Thumbnail images -->
+                <div class="row">
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/PrajituriMari1.jpg" style="width:100%;max-width:100px" alt="Prajituri" onclick="currentSlide(37)" >
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/PrajituriMari2.jpg" style="width:100%;max-width:100px" alt="Prajituri" onclick="currentSlide(38)" >
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/PrajituriMari3.jpg" style="width:100%;max-width:100px" alt="Prajituri"  onclick="currentSlide(39)" >
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/PrajituriMari4.jpg" style="width:100%;max-width:100px" alt="Prajituri" onclick="currentSlide(40)" >
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/PrajituriMari5.jpg" style="width:100%;max-width:100px" alt="Prajituri" onclick="currentSlide(41)" >
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/PrajituriMari6.jpg" style="width:100%;max-width:100px" alt="Prajituri" onclick="currentSlide(42)" >
+                  </div>
+                </div>
+              </div>        
+ 
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <h1 id="MiniPrajituri">Mini Prajituri</h1>
+            <div class="container">
+                <!-- Full-width images with number text -->
+                <div class="mySlides">
+                  <div class="numbertext">1 / 6</div>
+                    <img src="/Photos/MiniPrajituri1.jpg" style="width:100%;max-width:300px" alt="Prajituri">
+                </div>
+                <div class="mySlides">
+                  <div class="numbertext">2 / 6</div>
+                    <img src="/Photos/MiniPrajituri2.jpg" style="width:100%;max-width:300px" alt="Prajituri">
+                </div>              
+                <div class="mySlides">
+                  <div class="numbertext">3 / 6</div>
+                    <img src="/Photos/MiniPrajituri3.jpg"  style="width:100%;max-width:300px" alt="Prajituri">
+                </div>            
+                <div class="mySlides">
+                  <div class="numbertext">4 / 6</div>
+                    <img src="/Photos/MiniPrajituri4.jpg"  style="width:100%;max-width:300px" alt="Prajituri">
+                </div>             
+                <div class="mySlides">
+                  <div class="numbertext">5 / 6</div>
+                    <img src="/Photos/MiniPrajituri5.jpg"  style="width:100%;max-width:300px" alt="Prajituri">
+                </div>              
+                <div class="mySlides">
+                  <div class="numbertext">6 / 6</div>
+                    <img src="/Photos/MiniPrajituri6.jpg"  style="width:100%;max-width:300px" alt="Prajituri">
+                </div>
+
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              
+                <!-- Thumbnail images -->
+                <div class="row">
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/MiniPrajituri1.jpg" style="width:100%;max-width:100px" alt="Prajituri" onclick="currentSlide(43)" >
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/MiniPrajituri2.jpg" style="width:100%;max-width:100px" alt="Prajituri" onclick="currentSlide(44)" >
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/MiniPrajituri3.jpg" style="width:100%;max-width:100px" alt="Prajituri"  onclick="currentSlide(45)" >
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/MiniPrajituri4.jpg" style="width:100%;max-width:100px" alt="Prajituri" onclick="currentSlide(46)" >
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/MiniPrajituri5.jpg" style="width:100%;max-width:100px" alt="Prajituri" onclick="currentSlide(47)" >
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/MiniPrajituri6.jpg" style="width:100%;max-width:100px" alt="Prajituri" onclick="currentSlide(48)" >
+                  </div>
+                </div>
+              </div>            
+
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              <h1 id="PrajituriSpeciale">Prajituri Speciale</h1>
+            <div class="container">
+                <!-- Full-width images with number text -->
+                <div class="mySlides">
+                  <div class="numbertext">1 / 6</div>
+                    <img src="/Photos/PrajituriSpeciale1.jpg" style="width:100%;max-width:300px" alt="Prajituri">
+                </div>
+                <div class="mySlides">
+                  <div class="numbertext">2 / 6</div>
+                    <img src="/Photos/PrajituriSpeciale2.jpg" style="width:100%;max-width:300px" alt="Prajituri">
+                </div>              
+                <div class="mySlides">
+                  <div class="numbertext">3 / 6</div>
+                    <img src="/Photos/PrajituriSpeciale3.jpg"  style="width:100%;max-width:300px" alt="Prajituri">
+                </div>            
+                <div class="mySlides">
+                  <div class="numbertext">4 / 6</div>
+                    <img src="/Photos/PrajituriSpeciale4.jpg"  style="width:100%;max-width:300px" alt="Prajituri">
+                </div>             
+                <div class="mySlides">
+                  <div class="numbertext">5 / 6</div>
+                    <img src="/Photos/PrajituriSpeciale5.jpg" style="width:100%;max-width:300px" alt="Prajituri">
+                </div>              
+                <div class="mySlides">
+                  <div class="numbertext">6 / 6</div>
+                    <img src="/Photos/PrajituriSpeciale6.jpg"  style="width:100%;max-width:300px" alt="Prajituri">
+                </div>
+
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              
+                <!-- Thumbnail images -->
+                <div class="row">
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/PrajituriSpeciale1.jpg" style="width:100%;max-width:100px" alt="Prajituri" onclick="currentSlide(49)" >
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/PrajituriSpeciale2.jpg" style="width:100%;max-width:100px" alt="Prajituri" onclick="currentSlide(50)" >
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/PrajituriSpeciale3.jpg" style="width:100%;max-width:100px" alt="Prajituri"  onclick="currentSlide(51)" >
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/PrajituriSpeciale4.jpg" style="width:100%;max-width:100px" alt="Prajituri" onclick="currentSlide(52)" >
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/PrajituriSpeciale5.jpg" style="width:100%;max-width:100px" alt="Prajituri" onclick="currentSlide(53)" >
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/PrajituriSpeciale6.jpg" style="width:100%;max-width:100px" alt="Prajituri" onclick="currentSlide(54)" >
+                  </div>
+                </div>
+              </div>            
+
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <h1 id="Fursecuri">Fursecuri</h1>
+            <div class="container">
+                <!-- Full-width images with number text -->
+                <div class="mySlides">
+                  <div class="numbertext">1 / 6</div>
+                    <img src="/Photos/Fursecuri1.jpg" style="width:100%;max-width:300px" alt="Prajituri">
+                </div>
+                <div class="mySlides">
+                  <div class="numbertext">2 / 6</div>
+                    <img src="/Photos/Fursecuri2.jpg" style="width:100%;max-width:300px" alt="Prajituri">
+                </div>              
+                <div class="mySlides">
+                  <div class="numbertext">3 / 6</div>
+                    <img src="/Photos/Fursecuri3.jpg"  style="width:100%;max-width:300px" alt="Prajituri">
+                </div>            
+                <div class="mySlides">
+                  <div class="numbertext">4 / 6</div>
+                    <img src="/Photos/Fursecuri4.jpg"  style="width:100%;max-width:300px" alt="Prajituri">
+                </div>             
+                <div class="mySlides">
+                  <div class="numbertext">5 / 6</div>
+                    <img src="/Photos/Fursecuri5.jpg"  style="width:100%;max-width:300px" alt="Prajituri">
+                </div>              
+                <div class="mySlides">
+                  <div class="numbertext">6 / 6</div>
+                    <img src="/Photos/Fursecuri6.jpg"  style="width:100%;max-width:300px" alt="Prajituri">
+                </div>
+
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              
+                <!-- Thumbnail images -->
+                <div class="row">
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/Fursecuri1.jpg" style="width:100%;max-width:100px" alt="Prajituri" onclick="currentSlide(55)" >
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/Fursecuri2.jpg" style="width:100%;max-width:100px" alt="Prajituri" onclick="currentSlide(56)" >
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/Fursecuri3.jpg" style="width:100%;max-width:100px" alt="Prajituri"  onclick="currentSlide(57)" >
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/Fursecuri4.jpg" style="width:100%;max-width:100px" alt="Prajituri" onclick="currentSlide(58)" >
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/Fursecuri5.jpg" style="width:100%;max-width:100px" alt="Prajituri" onclick="currentSlide(59)" >
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/Fursecuri6.jpg" style="width:100%;max-width:100px" alt="Prajituri" onclick="currentSlide(60)" >
+                  </div>
+                </div>
+              </div>           
+ 
+              
+
+
+
+
+
+
+
+
+
+
+
+            <h1 id="Platouri">Platouri</h1>
+            <div class="container">
+                <!-- Full-width images with number text -->
+                <div class="mySlides">
+                  <div class="numbertext">1 / 6</div>
+                    <img src="/Photos/Platouri1.jpg" style="width:100%;max-width:300px" alt="Prajituri">
+                </div>
+                <div class="mySlides">
+                  <div class="numbertext">2 / 6</div>
+                    <img src="/Photos/Platouri2.jpg" style="width:100%;max-width:300px" alt="Prajituri">
+                </div>              
+                <div class="mySlides">
+                  <div class="numbertext">3 / 6</div>
+                  <img src="/Photos/Platouri3.jpg" style="width:100%;max-width:300px" alt="Prajituri">
+                </div>            
+                <div class="mySlides">
+                  <div class="numbertext">4 / 6</div>
+                  <img src="/Photos/Platouri4.jpg" style="width:100%;max-width:300px" alt="Prajituri">
+                </div>             
+                <div class="mySlides">
+                  <div class="numbertext">5 / 6</div>
+                  <img src="/Photos/Platouri5.jpg" style="width:100%;max-width:300px" alt="Prajituri">
+                </div>              
+                <div class="mySlides">
+                  <div class="numbertext">6 / 6</div>
+                  <img src="/Photos/Platouri6.jpg" style="width:100%;max-width:300px" alt="Prajituri">
+                </div>
+
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              
+                <!-- Thumbnail images -->
+                <div class="row">
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/Platouri1.jpg" style="width:100%;max-width:100px" alt="Prajituri" onclick="currentSlide(61)" >
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/Platouri2.jpg" style="width:100%;max-width:100px" alt="Prajituri" onclick="currentSlide(62)" >
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/Platouri3.jpg" style="width:100%;max-width:100px" alt="Prajituri"  onclick="currentSlide(63)" >
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/Platouri4.jpg" style="width:100%;max-width:100px" alt="Prajituri" onclick="currentSlide(64)" >
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/Platouri5.jpg" style="width:100%;max-width:100px" alt="Prajituri" onclick="currentSlide(65)" >
+                  </div>
+                  <div class="column">
+                    <img class="demo cursor" src="/Photos/Platouri6.jpg" style="width:100%;max-width:100px" alt="Prajituri" onclick="currentSlide(66)" >
+                  </div>
+                </div>
+              </div> 
+
+
+      </div>
+         
+      </div>
+  </article>
+
+
+  
+
+<!-- Footer -->
+
+
+<!-- Varianta 2  -->
+<footer class="w3-center w3-white w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <img alt="logo"  style="width:15%;height:10%" src="/Photos/Icon.png"/>
+  <h3>- Cofetăria☆Serelina -</h3>
+  <h5>Vă așteptăm!</h5>
+  
+  <p>
+     <a href="https://www.facebook.com/cofetariaserelina/" class="fa fa-facebook"></a>
+     <a href="https://www.instagram.com/cofetariaserelina/" class="fa fa-instagram"></a>
+  </p>
+
+  <br>
+  <a href="/" class="w3-button w3-black"><i class="fa fa-arrow-up w3-margin-right"></i>Acasa</a>
+</footer>
+
+
+
+</body>
+
+</html>

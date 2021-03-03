@@ -1,0 +1,840 @@
+<html>
+    <head>
+
+      <!-- {"nextId":2,"comanda":[{"id":1,"nume":"Lola","email":"lola@yh.com","mobile":"1234567890","tipulprod":"Torturi","descriereprod":"Ciocolata","livrare":"domiciliu","plata":"card"}]} -->
+
+        <br><title>Comenzi online</title>
+        <link rel="stylesheet" type="text/css" href="/style.css" />
+        <link rel="stylesheet" type="text/css" href="/w3.css" />
+    
+        <link rel="shortcut icon" type="image/png" href="/Photos/Icon.png ">
+
+    
+        <meta charset="UTF-8">
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- <link rel="stylesheet" href="form-style.css"> -->
+    
+        <script src="java.js"></script> 
+        <script src="j2.js"></script>
+
+  <!-- <script>
+
+     //.............................. Comanda........................
+
+           
+            window.onload = function () {
+
+                document.getElementById('start').addEventListener('click', function() {
+
+            let newUserId = document.getElementById('idInput').value;
+            let newname = document.getElementById('nameInput').value; // contactForm.name.value;
+            let newemail = document.getElementById('emailInput').value; // contactForm.email.value;
+            let newmobile = document.getElementById('mobileInput').value; //  contactForm.mobile.value;
+    
+            let newtipulprod = document.getElementById('tipulprodInput').value; // contactForm.tipulprod.value;
+            let newdescriereprod = document.getElementById('descriereprodInput').value; //  contactForm.descriereprod.value;
+
+            let newadresa = document.getElementById('adresa').value; //  contactForm.descriereprod.value;
+
+            //let newlivrare = document.getElementById('livrareInput').value; // contactForm.livrare.value;
+            // let newplata = document.getElementById('plataInput').value; // contactForm.plata.value;
+
+            
+
+
+//////////////////.....Validare date......///////////////////////////////////////////////
+
+        // Defining a function to display error message
+        function printError(elemId, hintMsg) {
+            document.getElementById(elemId).innerHTML = hintMsg;
+        }
+
+    // Defining error variables with a default value
+    var  nameErr = emailErr = mobileErr = tipulprodErr = livrareErr = plataErr = adresaErr = true;
+            
+
+    // Validare nume
+    if(newname == "") {
+        printError("nameErr", "Introduceti un nume valid");
+    } else {
+        var regex = /^[a-zA-Z\s]+$/;                
+        if(regex.test(newname) === false) {
+            printError("nameErr", "Introduceti un nume valid");
+        } else {
+            printError("nameErr", "");
+            nameErr = false;
+        }
+    }
+    
+    // Validare email 
+    if(newemail == "") {
+        printError("emailErr", "Introduceti o adresa de mail valida");
+    } else {
+        // Regular expression for basic email validation
+        var regex = /^\S+@\S+\.\S+$/;
+        if(regex.test(newemail) === false) {
+            printError("emailErr", "Introduceti o adresa de mail valida");
+        } else{
+            printError("emailErr", "");
+            emailErr = false;
+        }
+    }
+    
+    // Validare telefon 
+    if(newmobile == "") {
+        printError("mobileErr", "Introduceti un numar de telefon valid");
+    } else {
+        var regex = /^[1-9]\d{9}$/;
+        if(regex.test(newmobile) === false) {
+            printError("mobileErr", "Introduceti 10 cifre pentru un numar de telefon valid");
+        } else{
+            printError("mobileErr", "");
+            mobileErr = false;
+        }
+    }
+    
+    // Validare tipul produsului
+    if(newtipulprod == "Selectati") {
+        printError("tipulprodErr", "Selectati produsul dorit");
+    } else {
+        printError("tipulprodErr", "");
+        tipulprodErr = false;
+    }
+    
+
+
+
+    ////////////////////////////.....Introducere date livrare & plata......////////////////////////////////////////////////////
+
+        //LIVRARE optiuni radio
+        let rbs = document.querySelectorAll('input[name="livrare"]');
+                        // iei toate redio buttons care poarta acelasi name
+        let selectedValue;
+        for (const rb of rbs) {          // le parcurgi
+            if (rb.checked) {
+                selectedValue = rb.value; // il gasesti pe cel bifat si ii pastrezi atributul value
+                break;
+            }
+        }
+        //alert(selectedValue);    // aici ai valoarea
+        console.log(rbs);
+
+
+        //check_adresa   adresa
+
+
+        //   //DOMICILIU  optiune radio
+        // let rbs1 = document.querySelectorAll('input[name="check_adresa"]');
+        //                 // iei toate redio buttons care poarta acelasi name
+        // let selectedValue1;
+        // for (const rb1 of rbs1) {          // le parcurgi
+        //     if (rb1.checked) {
+        //         selectedValue1 = rb1.value; // il gasesti pe cel bifat si ii pastrezi atributul value
+        //         break;
+        //     }
+        // }
+
+        // //alert(selectedValue);    // aici ai valoarea
+        // console.log(rbs1);
+
+
+        //PLATA optiuni radio
+        let rrbs = document.querySelectorAll('input[name="plata"]');
+                        // iei toate redio buttons care poarta acelasi name
+        let sselectedValue;
+        for (const rrb of rrbs) {          // le parcurgi
+            if (rrb.checked) {
+                sselectedValue = rrb.value;  // il gasesti pe cel bifat si ii pastrezi atributul value
+                break;
+            }
+        }
+        //alert(sselectedValue);    // aici ai valoarea
+        console.log(rrbs);
+
+
+////////////////////////////.....Validare date livrare & plata......////////////////////////////////////////////////////////
+
+// Validare livrare
+    if(selectedValue == "") {
+        printError("livrareErr", "Selectati tipul livrarii");
+    } else {
+        printError("livrareErr", "");
+        livrareErr = false;
+    }
+
+    // // Validare livrare domiciliu
+    // if(newadresa == "" && selectedValue == "domiciliu") {
+    //     printError("adresaErr", "Selectati adresa de domiciliu");
+    // } else {
+    //     printError("adresaErr", "");
+    //    adresaErr = false;
+    // }
+
+
+     // Validare plata
+     if(sselectedValue == "") {
+        printError("plataErr", "Selectati tipul platii");
+    } else {
+        printError("plataErr", "");
+        plataErr = false;
+    }
+    
+    // Prevent the form from being submitted if there are any errors
+    if(( nameErr || emailErr || mobileErr || tipulprodErr || livrareErr || plataErr  ) == true) { 
+       return false; }
+    else 
+        {
+        // Creating a string from input data for preview
+        var dataPreview = "Ati introdus urmatoarele date: \n\n" +
+                          "ID-ul Comenzii: " + newUserId + "\n" +
+                          "Numele si Prenumele: " + newname + "\n" +
+                          "Adresa Email: " + newemail + "\n" +
+                          "Telefon: " + newmobile + "\n" +
+                          "Tipul produsului: " + newtipulprod + "\n" +
+                          "Descrierea produsului: " + newdescriereprod + "\n" +
+                          "Livrare: " + selectedValue + "\n" +
+                          "Adresa: " + newadresa+ "\n" +
+                          "Metoda de plata: " + sselectedValue + "\n" ;
+       
+            // Display input data in a dialog box before submitting the form
+            alert(dataPreview);
+        }
+
+
+        /////////////////////////.....Salvare date in localhost......////////////////////////////////////////////////
+
+
+        fetch('http://localhost:3000/addUser', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(
+                {
+                     id: newUserId,
+                     name : newname,
+                     email : newemail,
+                     mobile : newmobile,
+
+                     tipulprod : newtipulprod,
+                     descriereprod : newdescriereprod,
+
+                     
+                     livrare: selectedValue,
+                     adresa: newadresa,
+                     plata: sselectedValue
+
+                    //livrare :  newlivrare,
+                    //  plata : newplata
+        
+
+                }
+            )
+        })
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('response').innerText = data.response;
+        });
+    });
+}
+</script>    -->
+
+
+<script>
+
+  //.............................. Comanda........................
+
+        
+         window.onload = function () {
+
+             document.getElementById('start').addEventListener('click', function() {
+
+         let newUserId = document.getElementById('idInput').value;
+         let newname = document.getElementById('nameInput').value; // contactForm.name.value;
+         let newemail = document.getElementById('emailInput').value; // contactForm.email.value;
+         let newmobile = document.getElementById('mobileInput').value; //  contactForm.mobile.value;
+ 
+         let newtipulprod = document.getElementById('tipulprodInput').value; // contactForm.tipulprod.value;
+         let newdescriereprod = document.getElementById('descriereprodInput').value; //  contactForm.descriereprod.value;
+
+         let newadresa = document.getElementById('adresa').value; //  contactForm.adresa.value;
+
+        //  let newlivrare = document.getElementById('livrareInput').value; // contactForm.livrare.value;
+        //  let newplata = document.getElementById('plataInput').value; // contactForm.plata.value;
+
+         
+
+
+//////////////////.....Validare date......///////////////////////////////////////////////
+
+     // Defining a function to display error message
+     function printError(elemId, hintMsg) {
+         document.getElementById(elemId).innerHTML = hintMsg;
+     }
+
+ // Defining error variables with a default value
+ var  nameErr = emailErr = mobileErr = tipulprodErr = livrareErr = plataErr = adresaErr = true;
+         
+
+ // Validare nume
+ if(newname == "") {
+     printError("nameErr", "Introduceti un nume valid");
+ } else {
+    //  var regex = /^[a-zA-Z\s]+$/;  
+      var regex = /^[A-Z][a-z\s]+[A-Za-z\s]+$/;                
+     if(regex.test(newname) === false) {
+         printError("nameErr", "Introduceti un nume valid");
+     } else {
+         printError("nameErr", "");
+         nameErr = false;
+     }
+ }
+ 
+ // Validare email 
+ if(newemail == "") {
+     printError("emailErr", "Introduceti o adresa de mail valida");
+ } else {
+     // Regular expression for basic email validation
+    //  var regex = /^\S+@\S+\.\S+$/;
+    var regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+     if(regex.test(newemail) === false) {
+         printError("emailErr", "Introduceti o adresa de mail valida");
+     } else{
+         printError("emailErr", "");
+         emailErr = false;
+     }
+ }
+ 
+ // Validare telefon 
+ if(newmobile == "") {
+     printError("mobileErr", "Introduceti un numar de telefon valid");
+ } else {
+     var regex = /^[0-9]\d{9}$/;
+     if(regex.test(newmobile) === false) {
+         printError("mobileErr", "Introduceti 10 cifre pentru un numar de telefon valid");
+     } else{
+         printError("mobileErr", "");
+         mobileErr = false;
+     }
+ }
+ 
+ // Validare tipul produsului
+ if(newtipulprod == "Selectati") {
+     printError("tipulprodErr", "Selectati produsul dorit");
+ } else {
+     printError("tipulprodErr", "");
+     tipulprodErr = false;
+ }
+ 
+
+
+
+ ////////////////////////////.....Introducere date livrare & plata......////////////////////////////////////////////////////
+
+     //LIVRARE optiuni radio
+     let rbs = document.querySelectorAll('input[name="livrare"]');
+                     // iau toate radio buttons care poarta acelasi name
+     let selectedValue;
+     for (const rb of rbs) {          //  parcurg
+         if (rb.checked) {
+             selectedValue = rb.value; // il gasesc pe cel bifat si ii pastrez atributul value
+             break;
+         }
+     }
+    //  alert(selectedValue);    // aici am valoarea = "domiciliu" / "magazin"
+     console.log(rbs);
+
+
+
+       //DOMICILIU  optiune radio
+     let rbs1 = document.querySelectorAll('input[name="check_adresa"]');
+                     // iau toate radio buttons care poarta acelasi name
+     let selectedValue1;
+     for (const rb1 of rbs1) {          // le parcurg
+         if (rb1.checked) {
+             selectedValue1 = newadresa; // il gasesc pe cel bifat si ii pastrez atributul value
+             break;
+         }
+     }
+    //  alert(selectedValue1);    // aici ai valoarea de la adesa
+     console.log(rbs1);
+
+
+     //PLATA optiuni radio
+     let rrbs = document.querySelectorAll('input[name="plata"]');
+                     // iau toate radio buttons care poarta acelasi name
+     let sselectedValue;
+     for (const rrb of rrbs) {          // le parcurg
+         if (rrb.checked) {
+             sselectedValue = rrb.value;  // il gasesc pe cel bifat si ii pastrez atributul value
+             break;
+         }
+     }
+    //  alert(sselectedValue);    // aici am valoarea "cash"/"card"
+     console.log(rrbs);
+
+
+////////////////////////////.....Validare date livrare & plata......////////////////////////////////////////////////////////
+
+// Validare livrare
+  if(selectedValue ==  undefined) {
+
+     printError("livrareErr", "Selectati tipul livrarii");
+ } else {
+     printError("livrareErr", "");
+     livrareErr = false;
+ }
+
+// // Validare livrare domiciliu
+// if(selectedValue1 = '')
+//  if(  selectedValue == 'domiciliu' )
+//   {
+//      printError("adresaErr", "Selectati adresa de domiciliu");
+//  } else {
+//      printError("adresaErr", "");
+//     adresaErr = false;
+//  }
+
+
+  // Validare plata
+    if(sselectedValue ==  undefined) {
+
+     printError("plataErr", "Selectati tipul platii");
+ } else {
+     printError("plataErr", "");
+     plataErr = false;
+ }
+ 
+ // Prevent the form from being submitted if there are any errors
+ if(( nameErr || emailErr || mobileErr || tipulprodErr || livrareErr || plataErr  ) == true) { 
+    return false; }
+ else 
+     {
+     // Creating a string from input data for preview
+     var dataPreview = "Ati introdus urmatoarele date: \n\n" +
+                       "ID-ul Comenzii: " + newUserId + "\n" +
+                       "Numele si Prenumele: " + newname + "\n" +
+                       "Adresa Email: " + newemail + "\n" +
+                       "Telefon: " + newmobile + "\n" +
+                       "Tipul produsului: " + newtipulprod + "\n" +
+                       "Descrierea produsului: " + newdescriereprod + "\n" +
+                       "Livrare: " + selectedValue + "\n" +
+                       "Adresa: " + newadresa+ "\n" +
+                       "Metoda de plata: " + sselectedValue + "\n" ;
+    
+         // Display input data in a dialog box before submitting the form
+         alert(dataPreview);
+     }
+
+
+     /////////////////////////.....Salvare date in localhost......////////////////////////////////////////////////
+
+
+     fetch('http://localhost:3000/addUser', {
+         method: 'POST',
+         headers: {
+             'Content-Type': 'application/json'
+         },
+         body: JSON.stringify(
+             {
+                  id: newUserId,
+                  name : newname,
+                  email : newemail,
+                  mobile : newmobile,
+
+                  tipulprod : newtipulprod,
+                  descriereprod : newdescriereprod,
+
+                  
+                  livrare: selectedValue,
+                  adresa: newadresa,
+                  plata: sselectedValue
+
+                 //livrare :  newlivrare,
+                 //  plata : newplata
+     
+
+             }
+         )
+     })
+     .then(response => response.json())
+     .then(data => {
+         document.getElementById('response').innerText = data.response;
+     });
+ });
+}
+</script>   
+
+
+
+
+</head>
+
+
+
+
+
+<body >
+
+<div id="header">
+    <div class="w3-container" >
+        <div class="w3-content" style="max-width:700px">
+             
+            <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Comanda acum!</span></h5>
+
+
+
+            <strong><h3>Trimite-ne o comanda!</h3></strong></p>
+      
+
+            <!-- <form method="post"> -->
+
+            
+            <div class="row">
+              <label>Nr de ordine al Comenzii</label>
+              <input type="number"  id='idInput' name="id"  autofocus="autofocus"> </input> 
+
+              <style>
+                input[type=number]::-webkit-inner-spin-button, 
+                input[type=number]::-webkit-outer-spin-button { height:auto; opacity: 1; }
+            </style>
+
+                          
+              <div class="error" id="idErr" ></div>
+          </div>
+      
+            <div class="row">
+                <label>Numele si Prenumele</label>
+                <input type="text"  id='nameInput' name="name"></input> 
+                
+
+                <div class="error" id="nameErr"></div>
+            </div>
+      
+      
+             <div class="row">
+                <label>Adresa Email</label>
+                <input type="text"  id='emailInput' name="email"></input> 
+
+                <div class="error" id="emailErr"></div>
+            </div>
+      
+      
+            <div class="row">
+                <label>Telefon</label>
+                <input type="text"  maxlength="10" id='mobileInput' name="mobile"></input>
+
+                <div class="error" id="mobileErr"></div>
+            </div>
+      
+      
+             <div class="row">
+                <label>Tipul Produsului</label>
+                
+                <select  id="tipulprodInput" name="tipulprod">
+
+                    <option>Selectati</option>
+                    <option>Torturi</option>
+                    <option>Prajituri</option>
+                    <option>Produse Speciale</option>
+                    <option>Produse de Post</option>
+                </select> 
+               
+                <input  type="text" placeholder="Descrierea produsului"  id='descriereprodInput' name="descriereprod"></input>
+
+                
+                <div class="error" id="tipulprodErr"></div>
+            </div> 
+            
+            
+            <div class="row">
+                <label>Livrare</label>
+                <div class="form-inline">
+
+                    <!-- <select  id="livrareInput">  
+                         name="tipulprod" 
+                       
+                        <option>Selectati</option>
+                        <option>Magazin</option>
+                        <option>Domiciliu</option>
+                    </select>  -->
+
+
+                    <input type="radio" name="livrare" value="magaizn" id="magazinInput"> In magazin</input>
+                    <br>
+                    <input type="radio" name="livrare" value="domiciliu" id="domiciliuInput" > La domiciliu</input>
+
+                    <input type="checkbox" placeholder="Adresa" id="id_adresa" name="check_adresa"/>
+                    <input type="text" placeholder="Adresa" id="adresa" name="adresa"/>
+                    <style>
+                        #adresa {
+                            display:none;
+                        }
+                        #id_adresa:checked ~ #adresa {
+                            display:block;}
+                    </style>
+
+                   
+                </div>
+                <div class="error" id="livrareErr"></div>
+                <div class="error" id="adresaErr"></div>
+
+            </div> 
+            
+            
+            <div class="row">
+              <label>Metoda de plata</label>
+              <div class="form-inline">
+                
+                <!-- <select   id="plataInput">   name="tipulprod" 
+                   
+                    <option>Selectati</option>
+                    <option>Cash</option>
+                    <option>Card</option>
+                </select>  -->
+
+
+                <input type="radio" name="plata" value="Cash" id="cashInput"> Cash </input>
+                <br>
+                <input type="radio" name="plata" value="Card" id="cardInput" > Card </input>
+
+
+              </div>
+              <div class="error" id="plataErr"></div>
+            </div> 
+      
+      
+            <div class="row">
+                <p><button class="w3-button w3-black" type="submit" id="start" >TRIMITE</button></p>
+            </div>
+      
+      
+            <div class="row">
+                <div id='response'>
+                  Se proceseaza...
+                </div>
+            </div>
+      
+          </form>
+
+        </div>
+    
+
+       
+    </div>
+</div>
+
+<!-- <div > -->
+
+<div id="header">
+
+  <div class="w3-content" style="max-width:700px">
+    <img src="/Photos/photo2.jpg" alt="Poza Contact" class="center" style="width:50%; ">
+    <!-- <a href="index.html" class="w3-button w3-black"><i class="fa fa-arrow-up w3-margin-right"></i>Acasa</a> -->
+  </div>
+
+</div>
+
+
+     
+<!-- <div id="header"> -->
+
+<!-- <footer> -->
+    <!-- <a href="index.html" class="w3-button w3-black"><i class="fa fa-arrow-up w3-margin-right"></i>Acasa</a> -->
+    <div class="row">
+        <a href="/index.html" class="w3-button w3-black"><i class="fa fa-arrow-right w3-margin-right"></i>Acasa</a>
+    </div>
+    <div class="row">
+        <a href="/administrator.html" class="w3-button w3-black"><i class="fa fa-arrow-right w3-margin-right"></i>Administrator</a>
+    </div>
+    <div class="row">
+        <a href="/Torturi-Prajituri.html" class="w3-button w3-black"><i class="fa fa-arrow-right w3-margin-right"></i>Torturi si Prajituri</a>
+    </div>
+    <!-- <button class="w3-button w3-black" id="b2"> <a href="/Torturi-Prajituri.html">Torturi si Prajituri</a></button> -->
+
+<!-- </footer> -->
+<!-- </div> -->
+
+
+</body>
+
+<!-- ...............................Log in..................................... -->
+
+<!-- <body {font-family: Arial, Helvetica, sans-serif;}>
+
+    <style>
+      body {font-family: Arial, Helvetica, sans-serif;}
+      
+      /* Full-width input fields */
+      input[type=text], input[type=password] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+      }
+      
+      /* Set a style for all buttons */
+      button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+      }
+      
+      button:hover {
+        opacity: 0.8;
+      }
+      
+      /* Extra styles for the cancel button */
+      .cancelbtn {
+        width: auto;
+        padding: 10px 18px;
+        background-color: #f44336;
+      }
+      
+      /* Center the image and position the close button */
+      .imgcontainer {
+        text-align: center;
+        margin: 24px 0 12px 0;
+        position: relative;
+      }
+      
+      img.avatar {
+        width: 40%;
+        border-radius: 50%;
+      }
+      
+      .container {
+        padding: 16px;
+      }
+      
+      span.psw {
+        float: right;
+        padding-top: 16px;
+      }
+      
+      /* The Modal (background) */
+      .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        padding-top: 60px;
+      }
+      
+      /* Modal Content/Box */
+      .modal-content {
+        background-color: #fefefe;
+        margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+        border: 1px solid #888;
+        width: 80%; /* Could be more or less, depending on screen size */
+      }
+      
+      /* The Close Button (x) */
+      .close {
+        position: absolute;
+        right: 25px;
+        top: 0;
+        color: #000;
+        font-size: 35px;
+        font-weight: bold;
+      }
+      
+      .close:hover,
+      .close:focus {
+        color: red;
+        cursor: pointer;
+      }
+      
+      /* Add Zoom Animation */
+      .animate {
+        -webkit-animation: animatezoom 0.6s;
+        animation: animatezoom 0.6s
+      }
+      
+      @-webkit-keyframes animatezoom {
+        from {-webkit-transform: scale(0)} 
+        to {-webkit-transform: scale(1)}
+      }
+        
+      @keyframes animatezoom {
+        from {transform: scale(0)} 
+        to {transform: scale(1)}
+      }
+      
+      /* Change styles for span and cancel button on extra small screens */
+      @media screen and (max-width: 300px) {
+        span.psw {
+           display: block;
+           float: none;
+        }
+        .cancelbtn {
+           width: 100%;
+        }
+      }
+      </style>
+    
+    <h2>Modal Login Form</h2> 
+    
+    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+    
+    <div id="id01" class="modal">
+      
+      <form class="modal-content animate" action="/action_page.php" method="post">
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+          <img src="/Photos/Avatar.png" alt="Avatar" class="avatar">
+        </div>
+    
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+    
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+            
+          <button type="submit">Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+        </div>
+    
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+           <span class="psw">Forgot <a href="#">password?</a></span> 
+        </div>
+      </form>
+    </div>
+    
+    <script>
+    // Get the modal
+    var modal = document.getElementById('id01');
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    </script>
+    
+    </body> -->
+<!-- .......................................................................... -->
+
+
+</html>
