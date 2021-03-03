@@ -1,0 +1,154 @@
+
+<head>
+    <title>Lista comenzi</title>
+    <meta charset="utf-8">      
+
+
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="stylesheet" type="text/css" href="/w3.css" />
+
+    <link rel="shortcut icon" type="image/png" href="/Photos/Icon.png ">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+</head>
+
+<body class="container">
+
+<!-- headerul care se repeta pagina de pagina -->
+<%- include("../views/header") %>
+
+<div id="Acasa">
+    <div id="header" >
+      <img  alt="Coperta" style="min-height: 160px; padding-top: 10%; width:90%; height:90%" src="/Photos/cover.jpg"/>
+    </div> 
+  </div>
+
+<% console.log(locals.BD.comenzi[0].id, typeof locals.BD) %>
+
+<% if (locals.BD) { %>
+    <table>
+        <tr>    
+            <th>id</th>
+            <th>Nume</th>
+            <th>Email</th> 
+            <th>Mobil</th>  
+            <th>Tipul prod</th>
+            <th>Descriere prod</th>
+            <th>Livrare</th>
+            <th>Adresa</th>
+            <th>Plata</th>
+
+        </tr>
+        <% for (var i = 0; i < BD.comenzi.length; i++) { %>
+            <tr>
+                <td><%= BD.comenzi[i].id %></td>
+                <td><%= BD.comenzi[i].nume %></td>
+                <td><%= BD.comenzi[i].email %></td>
+                <td><%= BD.comenzi[i].mobile %></td>
+                <td><%= BD.comenzi[i].tipulprod %></td>
+                <td><%= BD.comenzi[i].descriereprod %></td>
+                <td><%= BD.comenzi[i].livrare %></td>
+                <td><%= BD.comenzi[i].adresa%></td>
+                <td><%= BD.comenzi[i].plata %></td>
+
+                <!-- <td><img src="/uploads/<%= BD.comenzi[i].poza %>" alt="nu are poza"/></td> -->
+            </tr>    
+        <% } %>
+    </table>
+    <% } else { %>
+        <p>Nu avem comenzi de afisat...</p>
+    <% } %>
+
+<%- include("../views/footer") %>
+
+</body>
+</html>
+
+
+<!-- 
+<html>
+    <head>
+        
+        <title>Toate Comenzile online </title>
+        <link rel="stylesheet" type="text/css" href="/style.css" />
+        <link rel="stylesheet" type="text/css" href="/w3.css" />
+    
+        <link rel="shortcut icon" type="image/png" href="/Photos/Icon.png ">
+    
+        <meta charset="UTF-8">
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+        <script src="/java.js"></script> 
+        <script src="/j2.js"></script>
+          
+ 
+        <script>
+            fetch('http://localhost:3000/users')
+            .then(response => response.json())
+            .then(data => {
+                let showThis = document.getElementById('response');
+                showThis.innerHTML = '';
+                console.log(data);
+                data.forEach(user =>{
+                    let userHTML = document.createElement('p');
+
+                    userHTML.innerHTML = user.id + '  ' + 
+                                        user.name  + '  ' +
+                                        user. email   + '  ' +
+                                        user. mobile   + '  ' +
+
+                                        user. tipulprod  + '  ' +
+                                        user.descriereprod  + '  ' +
+
+                                        user. livrare  + '  ' +
+                                        user. plata  + '\n';
+
+
+                    showThis.appendChild(userHTML);
+                }) 
+            });
+        </script>
+    </head>
+
+    <body id="hhheader">
+
+        <div class="w3-container"  >
+            <div class="w3-content" style="max-width:700px">
+                     
+            <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Vizualizati toate comenzile!</span></h5>
+        
+             <p><strong><h3>Comenzile primite sunt: </h3></strong></p>
+
+                
+
+             <div class="row">
+                    <div id='response'>
+                      Se incarca...
+                    </div>
+             </div>
+
+                 
+            </div>
+
+            
+        </div>
+
+
+        
+
+
+
+
+
+    </body>
+</html> -->

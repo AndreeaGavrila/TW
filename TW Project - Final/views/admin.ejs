@@ -1,0 +1,114 @@
+
+<!-- <p>Niste continut specific paginii pe care ne aflam</p> -->
+
+<!DOCTYPE html>
+<html lang="ro">
+<!-- <head>
+    <title>Administrator</title>
+
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="stylesheet" type="text/css" href="/w3.css" />
+
+    <link rel="shortcut icon" type="image/png" href="/Photos/Icon.png">
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+    <script src="/java.js"></script> 
+    <script src="/j2.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head> -->
+
+
+<head>
+
+  <!-- {"nextId":2,"comanda":[{"id":1,"nume":"Lola","email":"lola@yh.com","mobile":"1234567890","tipulprod":"Torturi","descriereprod":"Ciocolata","livrare":"domiciliu","plata":"card"}]} -->
+
+  <title>Administrator</title>
+  <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="stylesheet" type="text/css" href="/w3.css" />
+
+    <link rel="shortcut icon" type="image/png" href="/Photos/Icon.png ">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+<script src="/java.js"></script> 
+<script src="/j2.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body > 
+    <!-- class="container" -->
+
+    <div id="Acasa">
+        <div id="header" >
+          <img  alt="Coperta" style="min-height: 160px; padding-top: 10%; width:90%; height:90%" src="/Photos/cover.jpg"/>
+        </div> 
+      </div>
+
+<!-- headerul care se repeta pagina de pagina -->
+<%- include("../views/header") %>
+
+
+<div class="w3-container"  >
+    <div class="w3-content" style="max-width:700px">
+  
+      <br>   
+      <div class="row">
+          <p><strong><h4>Pentru a aduga o comanda finalizata:</h4></strong></p>
+      </div>
+  
+      <div class="row">
+          <button class="w3-button w3-black" id="b30"> <a href="/add_comanda">Click aici</a> </button>
+        </div>
+
+        <!-- <p>
+          <a href="/add_comanda">Adauga o comanda in BD</a>
+        </p> -->
+  
+  
+      <br>   
+      <div class="row">
+          <p><strong><h4>Pentru a acceseaza o toate comenzile online:</h4></strong></p>
+      </div>
+  
+      <div class="row">
+        <button class="w3-button w3-black" id="b20"> <a href="/list_comenzi">Click aici</a> </button>
+      </div>
+
+      <!-- <p>
+        <a href="/list_comenzi">Lista de comenzi</a>
+      </p> -->
+
+      <br>   
+      <div class="row">
+          <p><strong><h4>Sectiune abonati:</h4></strong></p>
+      </div>
+
+      <div class="row">
+        <button class="w3-button w3-black" > <a href="/404.html">Click aici</a> </button>
+      </div>
+  
+    </div>
+
+    </div>
+
+
+<!-- subsolul care se repeta  -->
+
+<%- include("../views/footer") %>
+
+</body>
+</html>
